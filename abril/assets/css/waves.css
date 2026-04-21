@@ -1,0 +1,26 @@
+/*
+WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES
+*/
+.app-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.app-wave svg {
+    position: relative;
+    display: block;
+    width: calc(101% + 1.3px);
+    height: 141px;
+}
+
+.app-wave .shape-fill {
+    fill: #FFB6C1;
+}

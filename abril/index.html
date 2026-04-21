@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqueta web</title>
+    <script type="text/javascript" src="./assets/js/addHtmlFromFiles.js"></script>
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/waves.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/keyframes.css">
+    <link rel="stylesheet" href="assets/css/marquee.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/table.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+</head>
+<body>
+    <div id="page-wrapper" class="page-wrapper">
+        <header id="header" class="header">
+            <nav>
+                <div class="brand-logo"><a href="/"><span>Web CC</span><img src="" alt=""></a>
+            </nav>
+        </header>
+        <main id="main" class="snap-wrapper">
+            <section class="snap-child hero-section bg-primary" aria-description="hero-section">
+                <div>
+                    <h1><span>Ninja</span><span>Turtles</span></h1>
+                </div>
+                <img src="./assets/img/hero.png" alt="Hero background">
+            </section>
+            <div class="app-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <section class="snap-child bg-secondary" aria-description="section-table">
+                <div class="container">
+                    <h2>Here we have some example images</h2>
+                    <div class="carousel"></div>
+                </div>
+                <div class="container">
+                    <h3>And these are responsive with srcset</h3>
+                    <img 
+                    class="img-block" 
+                    src="./assets/img/flamingo-fallback.jpg" 
+                    alt="responsive img tag"
+                    srcset="
+                    ./assets/img/animals/flamingo3x.jpg 450w, 
+                    ./assets/img/animals/turtles.jpg 675w,
+                    ./assets/img/animals/cute.jpg 900w,
+                    "
+                    sizes="
+                    (max-width: 480px) 450px,
+                    (max-width: 760px) 675px,
+                    (max-width: 1200px) 900px
+                    " >
+                </div>
+            </section>
+            <section class="snap-child bg-tertiary" aria-description="section-table">
+                <div class="container">
+                    <h2>This is the picture tag</h2>
+                    <h3>We show cute fishes</h3>
+                    <div class="img-wrapper">
+                        <picture>
+                            <source media="" srcset="./assets/img/animals/cute.jpg" type="image/jpg">
+                            <source media="(min-width: 500px)" 
+                            srcset="
+                            ./assets/img/animals/turtles.webp
+                            "
+                            type="image/webp">
+                            <img src="./assets/imganimals//nemo.jpg" alt="Default image in case of not supported">
+                        </picture>
+                    </div>
+                </div>
+                <div class="container snap-child">
+                    <h2>These are now some usemap examples</h2>
+                    <h3>We use latin america, why not?</h3>
+                    <div class="img-wrapper">
+                        <img id="samerica" class="img-block" src="./assets/img/mapa png.png" alt="South america's maps" usemap="#samap">
+                        <map name="samap">
+                            <area target="_blank" alt="Argentina" title="Argentina" href="https://de.wikipedia.org/wiki/Argentinien" coords="370,983,353,973,365,950,349,877,303,678,323,582,358,566,401,591,423,610,434,663,446,653,445,718,454,751,470,762,482,775,475,791,443,801,417,801,403,805,421,825,391,837,394,858,402,878,394,947,415,947,410,970,400,998" shape="poly">
+                            <area target="_blank" alt="Brasil" title="Brasil" href="https://de.wikipedia.org/wiki/Brasilien" coords="379,141,348,156,344,182,332,193,308,201,276,193,267,198,270,218,267,242,263,262,244,294,223,294,214,322,224,344,247,345,267,346,262,357,284,350,323,345,331,357,336,377,390,404,426,422,434,452,455,494,455,521,484,538,496,565,507,592,518,610,507,640,482,656,483,674,506,684,519,697,532,673,540,661,551,656,558,606,616,556,650,541,670,412,724,333,720,289,663,264,620,256,578,266,578,234,559,224,530,250,515,233,487,234,512,188,503,150,494,172,432,176,403,189,388,189" shape="poly">
+                            <area target="_self" alt="Venezuela" title="Venezuela" href="https://de.wikipedia.org/wiki/Venezuela" coords="310,186,324,173,318,133,360,130,362,99,365,68,340,54,289,46,269,28,246,35,249,58,237,74,224,62,222,39,220,56,225,74,225,88,250,86,257,95,284,100,286,122,284,141,287,158,296,170,299,178" shape="poly">
+                            <area target="_self" alt="Kolumbien" title="Kolumbien" href="https://de.wikipedia.org/wiki/Kolumbien" coords="218,29,187,49,168,77,152,97,158,137,150,160,132,177,156,197,175,190,199,218,219,236,239,233,248,249,254,228,244,208,243,189,247,174,275,166,275,117,251,117,240,100,226,104,210,76,207,54" shape="poly">
+                            <area target="" alt="Paraguay" title="Paraguay" href="https://de.wikipedia.org/wiki/Paraguay" coords="412,514,388,518,380,541,394,561,422,577,456,598,446,617,460,625,471,622,480,613,479,589,470,587,460,562,446,557,426,553,422,522" shape="poly">
+                        </map>
+                    </div>   
+                </div>
+            </section>
+            <section class="snap-child bg-primary" aria-description="section-table">
+                <div class="container">
+                    <h2>Marquee tags</h2>
+                    <h3>Deprecated</h3>
+                    <div class="">
+                        <marquee behavior="slide" direction="right" bgcolor="pink">from left to right</marquee>
+                        <marquee direction="alternate" width="auto" height="40" scrollamount="1" bgcolor="darkgray">This text will scroll from bottom to top slowly</marquee>
+                        <marquee
+                        direction="down"
+                        width="250"
+                        height="200"
+                        behavior="alternate"
+                        class="outlined" bgcolor="lightsalmon">
+                        Marquee padre mueve vertical
+                            <marquee behavior="scroll" direction="top" width="auto" bgcolor="red">Marquee hijo mueve horizontal</marquee>
+                        </marquee>
+                        <marquee
+                        direction="down"
+                        width="250"
+                        height="200"
+                        behavior="alternate"
+                        class="outlined" bgcolor="navy">
+                            <marquee behavior="alternate" direction="top">crea esta ilusion</marquee>
+                        </marquee>
+                        <marquee
+                        class="app-marquee"
+                        direction="down"
+                        width="250"
+                        height="200"
+                        behavior="alternate"
+                        class="outlined" bgcolor="whitesmoke">
+                            <marquee behavior="alternate" direction="top"><img src="./assets/img/dvd-logo.png" alt="dvd logo" width="85"></marquee>
+                        </marquee>
+                    </div>
+                </div>   
+            </section>
+            <section class="sanp-child bg-secondary" aria-description="table-section">
+                <div class="container">
+                    <table>
+                        <thead>
+                            <th>Id</td>
+                            <th>Name</td>
+                            <th>Types</td>
+                            <th>Evolves</td>
+                            <th>Image</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Bulbasaur</td>
+                                <td>Grass / Poison</td>
+                                <td>Yes</td>
+                                <td><img src="https://i.ytimg.com/vi/a9ioQbltCtc/maxresdefault.jpg" alt="Bulbasaur image"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Squirtle</td>
+                                <td>Water</td>
+                                <td>Yes</td>
+                                <td><img src="https://preview.redd.it/image-squirtle-is-absolutely-awesome-anyone-remember-in-the-v0-oj0d97dt11461.jpg?auto=webp&s=ab800b1cd64ecb72b39e5fa33f98a95d7c6fcce6" alt="Squirtle image"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Charmander</td>
+                                <td>Fire</td>
+                                <td>Yes</td>
+                                <td><img src="https://cdn0.heartbase.gg/user_pictures/1598000/1598893/256.jpg?1706723418" alt="Charmander image"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Pikachu</td>
+                                <td>Electric</td>
+                                <td>No</td>
+                                <td><img src="https://www.fomostore.in/cdn/shop/files/BISTAM375_1_819d72f0-fb42-459e-8eec-2d70e9888a19.jpg?v=1751272333&width=1920" alt="Pikachu image"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="custom-table">
+                        <caption>
+                            This is some fake data from Swapi
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>name</th>
+                                <th>mass</th>
+                                <th>planet</th>
+                                <th>vehicle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Luke Skywalker</td>
+                                <td>Fake</td>
+                                <td>Data</td>
+                                <td>Api</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Luke Skywalker</td>
+                                <td>Fake</td>
+                                <td>Data</td>
+                                <td>Api</td>
+                            </tr>
+                                                            <tr>
+                                <td>1</td>
+                                <td>Luke Skywalker</td>
+                                <td>Fake</td>
+                                <td>Data</td>
+                                <td>Api</td>
+                            </tr>
+                                                            <tr>
+                                <td>1</td>
+                                <td>Luke Skywalker</td>
+                                <td>Fake</td>
+                                <td>Data</td>
+                                <td>Api</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="snap-child bg-tertiary" aria-description="media-section">
+                <div class="container">
+                    Video demonstration
+                    <video controls autoplay muted loop class="app-video">
+                        <source src="/abril/assets/media/videoplayback.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="container">
+                    Audio tag is really useful!
+                    <audio controls>
+                        <source src="./assets/media/numb.mp4" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    <script>
+    addHtmlFromFiles('./views/sidebar.html');
+</script>
+</body>
+</html>
