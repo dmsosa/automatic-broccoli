@@ -1,0 +1,79 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    -webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--light);
+    font-family: sans-serif;
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    overflow: hidden scroll;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.content {
+    height: 100vh;
+    padding: 4rem;
+}
+
+p {
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.7;
+    margin:  0 auto;
+}
+.carousel-ds-wrapper {
+    position: relative;
+}
+
+.carousel-ds {
+    position: relative;
+    height: fit-content;
+    overflow: clip;
+}
+
+.carousel-ds-item {
+    background-color: lightskyblue;
+    border: solid burlywood 0.5rem;
+    position: absolute;
+    padding: 2rem;
+	border-radius: 12px;
+    transition: left 0.4s ease, top 0.4s ease;
+
+}
+
+.carousel-ds-nav {
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.carousel-ds-nav-btn {
+    border: solid black 0.5rem;
+    cursor: pointer;
+}

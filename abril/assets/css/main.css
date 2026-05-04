@@ -1,0 +1,36 @@
+:root {
+    --list-margin: 0.5rem;
+}
+
+.main-content {
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: auto;
+}
+
+.navbar-ul, .app-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--app-gap);
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+}
+.navbar-ul .app-ul li:not(:first-of-type), .app-ul li:not(:first-of-type) {
+    margin-left: var(--list-margin);
+}
+.navbar-ul .app-ul li:not(:first-of-type), .app-ul.vertical li:not(:first-of-type) {
+    margin-left: 0;
+    margin-top: var(--list-margin);
+}
+.navbar-ul, .app-ul.vertical {
+    flex-direction: column;
+}
+@media only screen and (min-width: 756px) {
+    .navbar-ul {
+        flex-direction: row;
+    }
+}

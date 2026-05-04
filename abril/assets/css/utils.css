@@ -1,0 +1,8 @@
+.bordered {
+    border-radius: var(--app-border-radius);
+    border: var(--app-border);
+    border-color: var(--app-border-color);
+}
+.mx-auto {
+    margin: 0 auto !important;
+}

@@ -1,0 +1,36 @@
+/*
+IMAGES IMAGES IMAGES IMAGES
+IMAGES IMAGES IMAGES IMAGES
+IMAGES IMAGES IMAGES IMAGES
+IMAGES IMAGES IMAGES IMAGES
+IMAGES IMAGES IMAGES IMAGES
+*/
+
+.img-block {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+/*
+VIDEO VIDEO VIDEO VIDEO
+VIDEO VIDEO VIDEO VIDEO
+VIDEO VIDEO VIDEO VIDEO
+VIDEO VIDEO VIDEO VIDEO
+VIDEO VIDEO VIDEO VIDEO
+*/
+
+.app-video {
+    background-color: red;
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    border: var(--app-border);
+    padding: var(--app-table-padding);
+}
+
+.app-video-player {
+
+}

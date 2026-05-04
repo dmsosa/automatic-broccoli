@@ -9,31 +9,52 @@ ROOT ROOT ROOT ROOT ROOT
     --container-pad: 0.75rem;
     --container-ms: 0.5rem;
     --container-me: 0.5rem;
+    --app-gap: 0.5rem;
     --app-border: solid 0.35rem;
     --app-border-radius: 0.5rem;
-    --dark: darkslategray;
-    --light: whitesmoke;
+    --dark: rgb(15, 30, 30);
+    --dark-2: rgb(30, 50, 50);
+    --dark-3: rgb(30, 79, 79);
+    --light: rgb(255, 255, 255);
+    --light-2: rgb(225, 225, 225);
+    --light-3: rgb(200, 200, 200);
     --app-border-dark: teal;
     --app-border-light: teal;
-    --primary: teal;
-    --app-header-width: 100vw;
-    --app-header-height: 3.25rem;
-    --app-header-padding: 0.25rem 1rem;
-    --app-header-bg: red;
+    --primary: rgb(0, 180, 128);
+    --secondary: rgb(0, 128, 180);
+    --tertiary: rgb(128, 180, 0);
     --app-table-cell-width: 3rem;
     --app-table-padding: 0rem .75rem;
     --app-table-border-width: 0.125rem;
     --bg-primary: lightpink;
     --bg-secondary: lightblue;
     --bg-tertiary: lightgray;
-}   
+    --app-color-transition: 0.4s ease;
+}  
+
+/*
+Source - https://stackoverflow.com/a/35256494
+Posted by JamieC, modified by community. See post 'Timeline' for change history
+Retrieved 2026-04-23, License - CC BY-SA 4.0
+*/
+
+html {
+  box-sizing: border-box;
+  /* 62.5% of 16px user agent font size is 10px */
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 body {
     background-color: var(--light);
     font-family: sans-serif;
     color: var(--dark);
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
 }
 body.dark-theme {
     background-color: var(--dark);
@@ -44,63 +65,25 @@ body.dark-theme {
     margin-left: var(--container-ms);
     margin-right: var(--container-me)
 }
-/* div#page-wrapper {
+.container.box {
+    width: 320px;
+}
+div#page-wrapper {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow: hidden;
 }
 
-@media screen  and (min-width:676px) {
+@media screen  and (min-width: 765px) {
     div#page-wrapper {
         flex-direction: row;
     }
-} */
-
-
-/*
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR 
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR
-SIDEBAR SIDEBAR SIDEBAR SIDEBAR
-*/
-.sidebar {
-    display: block;
-    height: 100vh;
-    min-height: 100vh;
-    width: 250px;
-    background-color: pink;
-    flex-grow: 2;
-    flex-basis: 50%;
-    flex-shrink: 0;
 }
 
 
-/*
-HEADER HEADER HEADER HEADER 
-HEADER HEADER HEADER HEADER
-HEADER HEADER HEADER HEADER
-HEADER HEADER HEADER HEADER
-HEADER HEADER HEADER HEADER
-HEADER HEADER HEADER HEADER
-HEADER HEADER HEADER HEADER
-*/
-.header nav {
-    display: flex;
-    width: 100%;
-}
 
-.header {
-    width: var(--app-header-width);
-    height: var(--app-header-height);
-    padding: var(--app-header-padding);
-    position: sticky;
-    transition: transform 0.4s ease;
-    backdrop-filter: blur(2px);
-    background-color: var(--app-header-bg);
-    z-index: 1000;
-}
 
 section {
     position: relative;
@@ -121,15 +104,31 @@ section.bg-tertiary {
     align-items: center;
     flex-direction: column;
 }
-.bordered {
-    border-radius: var(--app-border-radius);
-    border: var(--app-border);
-    border-color: var(--app-border-color);
-    flex-basis: 50%;
+
+.d-flex-default {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--app-gap);
 }
+
 @media only screen and (min-width: 576px) {
     .d-flex-resp {
         flex-direction: row;
+    }
+    .container.box {
+        width: 550px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container.box {
+        width: 760px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container.box {
+        width: 960px;
     }
 }
 /* .container:hover {
@@ -137,52 +136,6 @@ section.bg-tertiary {
     cursor: pointer;
 } */
 
-/*
-BUTTON BUTTON BUTTON BUTTON 
-BUTTON BUTTON BUTTON BUTTON
-BUTTON BUTTON BUTTON BUTTON
-BUTTON BUTTON BUTTON BUTTON
-BUTTON BUTTON BUTTON BUTTON
-BUTTON BUTTON BUTTON BUTTON
-BUTTON BUTTON BUTTON BUTTON
-*/
-
-button {
-padding: 10px;
-border: none;
-background-color: navajowhite;
-color: darkslategrey;
-transition: all 0.4s ease;
-}
-button:hover {
-    box-shadow: 0 5px 5px 5px black;
-    cursor: pointer;
-    color: brown;
-    background-color: burlywood;
-}
-
-/*
-IMAGES IMAGES IMAGES IMAGES
-IMAGES IMAGES IMAGES IMAGES
-IMAGES IMAGES IMAGES IMAGES
-IMAGES IMAGES IMAGES IMAGES
-IMAGES IMAGES IMAGES IMAGES
-*/
-.img-wrapper {
-    max-width: 80%;
-}
-.img-wrapper img {
-    max-width: 100%;
-    width: 100%;
-}
-.img-block {
-    display: block;
-    max-width: 80%;
-}
-.img#samerica {
-    width: 860px;
-    height: 1200px;
-}
 
 /*
 TABLES TABLES TABLES TABLES
@@ -216,23 +169,3 @@ table img {
     max-width: 100%;
 }
 
-/*
-VIDEO VIDEO VIDEO VIDEO
-VIDEO VIDEO VIDEO VIDEO
-VIDEO VIDEO VIDEO VIDEO
-VIDEO VIDEO VIDEO VIDEO
-VIDEO VIDEO VIDEO VIDEO
-*/
-
-.app-video {
-    background-color: red;
-    max-width: 80%;
-    margin: 0 auto;
-    display: block;
-    border: var(--app-border);
-    padding: var(--app-table-padding);
-}
-
-.app-video-player {
-
-}
