@@ -1,31 +1,47 @@
-function CarouselDs(el) {
-    this.items = [];
-    this.gap = 2;
-    this.item = {
-        width: undefined
-    };
+/**
+ * 
+ * @param {HTMLElement} el //Element to be used to create our Carousel
+ */
+function CarouselDs(el, settings = {}) {
     this._version = '1.0.0';
-    this.showSize = 3;
+    this.items = [];
+    this.itemWidth = undefined;
+    this.activeItem = undefined;
+    this.useActiveClass = false;
+    this.gap = 2;
+    this.showSize = 6;
     this.el = el;
 
-    this.init();
+    this.init(settings);
 }
 
-CarouselDs.prototype.init = async function init() {
+/**
+ * 
+ * @param {{
+ * useActiveClass?: boolean,
+ * showSize?: number,
+ * gap?: number,
+ * }} settings Settings object with optional fields
+ */
+CarouselDs.prototype.init = async function init(settings) {
+
+    this.showSize = settings.showSize ? parseInt(settings.showSize) : 3;
+    this.gap = settings.gap ? parseInt(settings.gap) : 5;
+    this.useActiveClass = settings.useActiveClass ?? true;
+
     await this.writeDOM();
-    const navButtons = this.el.parentElement.querySelectorAll('.carousel-ds-nav-btn');
-    navButtons[0].dataset.dir = 'prev';
-    navButtons[navButtons.length - 1].dataset.dir = 'next';
-    navButtons.forEach((btn) => btn.addEventListener("click", this.move));
+    await this.addNavButtons();
+    await this.setMinItems();
 
     const [maxW, maxH] = await this.getDimension();
     this.el.style.height = maxH + 'px';
-    const totalWidth = (maxW * this.showSize) + (this.gap * this.showSize);
+    const totalWidth = (maxW * this.showSize) + (this.gap * (this.showSize - 1));
     this.el.style.width = totalWidth + 'px';
-    this.item.width = (totalWidth / this.showSize) - this.gap;
+    this.itemWidth = (totalWidth / this.showSize) - this.gap;
 
-    await this.clone('prev');
+    // await this.clone('last');
     await this.build();
+    await this.setActiveClass();
 }
 
 CarouselDs.prototype.writeDOM = async function writeDOM() {
@@ -47,12 +63,21 @@ CarouselDs.prototype.writeDOM = async function writeDOM() {
     this.items = this.el.querySelectorAll('.carousel-ds-item');
 }
 
+CarouselDs.prototype.addNavButtons = async function addNavButtons() {
+    const navButtons = this.el.parentElement.querySelectorAll('.carousel-ds-nav-btn');
+    navButtons[0].dataset.dir = 'prev';
+    navButtons[navButtons.length - 1].dataset.dir = 'next';
+    navButtons.forEach((btn) => btn.addEventListener("click", (event) => {
+        this.move.call(this, event);
+    }));
+}
+
 CarouselDs.prototype.build = async function build() {
     let pos = -1;
     for (let i = 0; i < this.items.length ; i++ )
     {
-        this.items[i].style.width = this.item.width + 'px';
-        this.items[i].style.left = (this.item.width + this.gap) * pos + 'px';
+        this.items[i].style.width = this.itemWidth + 'px';
+        this.items[i].style.left = (this.itemWidth + this.gap) * pos + 'px';
         pos++;
     }
 }
@@ -68,38 +93,84 @@ CarouselDs.prototype.getDimension = async function getDimension() {
     return [maxW, maxH];
 }
 
-
-CarouselDs.prototype.clone = async function clone(dir) {
-    let pos;
-    if (dir === 'next') pos = 0;
-    else pos = this.items.length - 1;
+/**
+ * Clone first item and append it to the current items list, OR
+ * clone last item and preprend it.
+ * Must change both the DOM and our internal this.items array. 
+ * In order for other functions to work properly
+ * Remove the item that was cloned.
+ * @param {string} target //target item to be cloned
+ */
+CarouselDs.prototype.clone = async function clone(target) {
+    let pos = undefined;
+    if (target === 'first')
+        pos = 0;
+    else if (target === 'last')
+        pos = this.items.length - 1;
+    else 
+        throw new Error('target clone not supported');
     const item = this.items[pos];
-    const c = item.cloneNode(true);
-    if (dir === 'next') this.el.append(c);
-    else this.el.prepend(c);
+    const clone = item.cloneNode(true);
+    if (target === 'first')
+    {
+        this.el.append(clone);
+    }
+    else
+    {
+        this.el.prepend(clone);
+    }
     item.remove();
+    this.items = this.el.querySelectorAll('.carousel-ds-item');
 }
 
+/**
+ * the direction is going to be determined by the button clicked
+ * if next, clone the first element and append to the items, remove item cloned
+ * run build and setActiveClass
+ * if prev, the proccess is the same but cloning last item and prepend
+ * @param {MouseEvent} event Event fired by the button that was clicked
+ */
 CarouselDs.prototype.move = async function move(event) {
     const btn = event.currentTarget;
-    if (btn.dataset.dir === 'next') await this.clone('next');
-    else await this.clone('prev');
+    if (btn.dataset.dir === 'next') await this.clone('first');
+    else await this.clone('last');
     await this.build();
+    await this.setActiveClass();
 }
 
-CarouselDs.prototype.setMinItems() = function setMinItems() {
-    const minItems = this.showSize + 2;
-    const itemsLength = this.items.length;
-    while ( itemsLength < this.el.showSize + 2)
-    {
-        let i = 0;
-        for (let i = 0 ; i < this.items.length ; i++) {
-            this.el.prepend(c);
-        }
-        
+
+/**
+ * sets the minimum items that are required for our carousel to look good
+ * the minimum size is always showSize + 2, for the first and last 'div' elements
+ * those are hidden by overflow-x: clip, but are necessary for the animation to look good visually
+ */
+CarouselDs.prototype.setMinItems = async function setMinItems() {
+    const minLen = this.showSize + 2;
+    const itemsLen = this.items.length;
+    if (itemsLen >= minLen) return;
+    for (let i = 0 ; i < itemsLen ; i++) {
+        let clone = this.items[i].cloneNode(true);
+        this.el.append(clone);
     }
+    this.items = this.el.querySelectorAll('.carousel-ds-item');
+    if ( this.items.length < minLen) await this.setMinItems();
 }
+
+/**
+ * adds 'active' class for the middle element of the carousel
+ * and removes 'active' class from the previous active element
+ */
+CarouselDs.prototype.setActiveClass = async function setActiveClass() {
+    if (!this.useActiveClass) return;
+    if (this.activeItem !== undefined )
+        this.activeItem.classList.remove('active');
+    const middle = Math.floor(this.items.length / 2);
+    this.activeItem = this.items[middle];
+    this.activeItem.classList.add('active');
+}
+
+
 const carousels = document.querySelectorAll('.carousel-ds');
-carousels.forEach((el) => new CarouselDs(el)); //How this is going to create a new Carousel within HTML?
+carousels.forEach((el) => new CarouselDs(el, { useActiveClass: true })); //How this is going to create a new Carousel within HTML?
 //1, create parent wrapper, insert el within parent wrapper, insert wrapper where previous object was
 

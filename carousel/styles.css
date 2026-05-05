@@ -51,7 +51,7 @@ p {
 .carousel-ds {
     position: relative;
     height: fit-content;
-    overflow: clip;
+    overflow-x: clip;
 }
 
 .carousel-ds-item {
@@ -60,8 +60,12 @@ p {
     position: absolute;
     padding: 2rem;
 	border-radius: 12px;
-    transition: left 0.4s ease, top 0.4s ease;
+    transition: all 0.5s ease;
+}
 
+.carousel-ds-item.active {
+    top: -1.5rem;
+    outline: red 1px solid;
 }
 
 .carousel-ds-nav {
