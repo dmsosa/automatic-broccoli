@@ -1,0 +1,32 @@
+.bordered {
+    border-radius: var(--app-border-radius);
+    border: var(--app-border);
+    border-color: var(--app-border-color);
+}
+.mx-auto {
+    margin: 0 auto !important;
+}
+
+.bg-primary {
+    background-color: var(--bg-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-tertiary {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.color-primary {
+    color: var(--color-primary) !important;
+}
+
+.color-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.color-tertiary {
+    color: var(--color-tertiary) !important;
+}

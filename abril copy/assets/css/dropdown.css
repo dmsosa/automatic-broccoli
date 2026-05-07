@@ -1,0 +1,51 @@
+.dropdown-wrapper {
+    position: relative;
+    display: block;
+}
+.dropdown-toggler {
+    display: flex !important;  
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.dropdown-toggler span {
+    display: block;
+}
+
+.dropdown-toggler svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: transparent;
+    stroke-width: 0.2rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: max-content;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease, background-color 0.2s ease;
+
+}
+
+.dropdown-wrapper.active .dropdown-toggler {
+    background-color: var(--bg-secondary);
+}
+
+
+.dropdown-wrapper.active .dropdown-menu {
+    max-height: max-content;
+    background-color: var(--bg-secondary);
+}
+
+.dropdown-option {
+    display: block;
+    width: 100%;
+}
+

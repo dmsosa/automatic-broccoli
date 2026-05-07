@@ -1,0 +1,56 @@
+:root {
+    --list-margin: 0.5rem;
+}
+
+.main-content {
+    display: block;
+    overflow: hidden scroll;
+    height: 100vh;
+}
+
+.app-ul, .dropdown-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    flex-direction: column;
+}
+
+
+.app-ul li .link, .navbar-ul li .link, .dropdown-ul li .link {
+    display: block;
+    width: 100%;
+    padding: var(--link-padding);
+}
+
+.link.outlined:hover,
+.link.outlined:focus,
+.link.outlined:focus-visible {    
+    outline: var(--app-border);
+}
+
+.app-ul li:not(:first-of-type), .dropdown-ul li:not(:first-of-type) {
+    margin-top: var(--list-margin);
+}
+
+.link {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.link:hover, .link:focus, .link:active {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-content {
+        width: calc(100vw - var(--sidebar-width));
+    }
+}
