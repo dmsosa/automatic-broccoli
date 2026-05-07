@@ -24,14 +24,13 @@
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1.5rem);
     left: 0;
     right: 0;
-    height: max-content;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.2s ease, background-color 0.2s ease;
-
+    height: fit-content;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(-1.5rem);
 }
 
 .dropdown-wrapper.active .dropdown-toggler {
@@ -40,7 +39,8 @@
 
 
 .dropdown-wrapper.active .dropdown-menu {
-    max-height: max-content;
+    opacity: 1;
+    transform: translateY(0);
     background-color: var(--bg-secondary);
 }
 

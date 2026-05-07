@@ -1,9 +1,14 @@
+const allDropdowns = document.querySelectorAll('.dropdown-wrapper');
 const dropdownTogglers = document.querySelectorAll('.dropdown-toggler');
 
 dropdownTogglers.forEach((t) => {
     t.addEventListener("click", (event) => {
         const target = event.currentTarget;
         const parent = target.parentElement;
+        //remove active class in other dropdowns
+        allDropdowns.forEach((d) => {
+            if (d !== parent) d.classList.remove('active');
+        });
         parent.classList.toggle("active");
         //remove active class when clicked on an option
         const options = parent.querySelectorAll('.dropdown-option');

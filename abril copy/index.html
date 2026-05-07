@@ -80,22 +80,45 @@
             </header>
             <main id="main" class="snap-wrapper">
                 <section class="snap-child hero-section bg-primary" aria-description="hero-section">
-                    <div>
-                        <h1><span>Ninja</span><span>Turtles</span></h1>
+                    <div class="main-bg">
+                        <div class="clipper active">
+                            <picture>
+                                <source type="image/webp" srcset="./assets/img/hero/herobg-lg.webp" media="(min-width: 1024px)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-lg.webp" media="(min-width: 768px)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-lg.jpg" media="(min-width: 498px)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-sm.jpg" media="(min-width: 300px)">
+                                <img src="./assets/img/hero/herobg-lg.webp" alt="default hero background" role="presentation">
+                            </picture>
+                        </div>
                     </div>
-                    <img
-                    src="./assets/img/animals/turtles.jpg"
-                    alt="Hero background"
-                    srcset="
-                    ./assets/img/animals/cute.jpg 500px,
-                    ./assets/img/animals/turtles800.jpg 80px,
-                    ./assets/img/animals/flaming4x.jpg 1000px
-                    "
-                    sizes="
-                    10px,
-                    (min-width: 768px) 760px,
-                    (min-width: 1024x) 10px"
-                    >
+                    <div class="section-content">
+                        <div class="text-content">
+                            <h1 class="text-wrap uppercase">
+                                <div class="split">
+                                    <span class="line linesymbol active">Star</span>
+                                </div>
+                                <div class="split">
+                                    <span class="line active">Wars</span>
+                                </div>
+                            </h1>
+                        </div>
+                        <div class="media-content">
+                            <p class="h6 uppercase bold m-0 text-wrap">
+                                <span class="line wrap active">
+                                    Hey now, you're planet
+                                </span>
+                            </p>
+                            <p class="h6 uppercase bold m-0 text-wrap">
+                                <span class="line wrap active">
+                                    Each of the nine episodic films begins with nearly identical openings, with the text "A long time ago in a galaxy far, far away.…" is displayed, followed by the Star Wars logo over a field of stars.
+                                </span>
+                            </p>
+                            <a href="#section1" class="h6 btn btn-primary bold btn-marquee">
+                                <span>START</span>
+                                <marquee behavior="scroll" direction="right">START</marquee>
+                            </a>
+                        </div>
+                    </div>
                 </section>
                 <div class="app-wave">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

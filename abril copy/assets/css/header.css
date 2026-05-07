@@ -20,12 +20,15 @@ HEADER HEADER HEADER HEADER
     justify-content: space-between;
     align-items: center;
     padding: var(--app-header-padding);
+    color: var(--light);
 }
 
 .header {
     box-sizing: inherit;
     width: var(--app-header-width);
     position: sticky;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease;
     z-index: 1000;
 }
@@ -156,7 +159,7 @@ nav .nav-dropdown-menu.active {
     :root {
         --app-header-width: 100%;
     }
-/*     
+    
     nav .btn.nav-dropdown-toggler {
         display: none;
     }
@@ -180,5 +183,5 @@ nav .nav-dropdown-menu.active {
     }
     .navbar-ul li {
         background-color: transparent !important;
-    } */
+    }
 }
