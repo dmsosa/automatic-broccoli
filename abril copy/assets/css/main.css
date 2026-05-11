@@ -1,5 +1,8 @@
 :root {
+    --app-gutter-y: 0.75rem;
+    --app-gutter-x: 1.6rem;
     --list-margin: 0.5rem;
+    --wave-padding-bottom: 1.5rem;
 }
 
 .main-content {
@@ -32,7 +35,7 @@ HERO HERO HERO HERO HERO
 .main-bg img {
     position: absolute;
     height: 100%;
-    width: 120%;
+    width: 85%;
     left: 50%;
     transform: translate(-50%, 0%);
 }
@@ -69,9 +72,14 @@ HERO HERO HERO HERO HERO
     right: 0;
     height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: .25rem 1.5rem;
+}
+
+.hero-section .section-content .text-content {
+    align-self: start;
 }
 
 .hero-section .section-content .media-content {
@@ -79,12 +87,57 @@ HERO HERO HERO HERO HERO
     justify-content: flex-end;
     flex-wrap: wrap;
     max-width: 50%;
+    align-self: end;
+    margin-top: 2rem;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: var(--app-gutter-y) var(--app-gutter-x);
+}
+
+.section-content.vertical {
+    flex-direction: column !important;
 }
 
 
 
+/*
+WAVES WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES WAVES
+WAVES WAVES WAVES WAVES WAVES
+*/
+.app-wave {
+    padding-bottom: var(--wave-padding-bottom);
+}
+.app-wave.primary svg, [class*='theme-light'] .app-wave.primary svg {
+    fill: var(--bg-primary);
+}
 
+.app-wave.secondary svg, [class*='theme-light'] .app-wave.secondary svg {
+    fill: var(--bg-secondary);
+}
 
+.app-wave.tertiary svg, [class*='theme-light'] .app-wave.tertiary svg {
+    fill: var(--bg-tertiary);
+}
+
+[class*='theme-dark'] .app-wave.primary svg {
+    fill: var(--bg-primary-dark);
+}
+
+[class*='theme-dark'] .app-wave.secondary svg {
+    fill: var(--bg-secondary-dark);
+}
+
+[class*='theme-dark'] .app-wave.tertiary svg {
+    fill: var(--bg-tertiary-dark);
+}
 /*
 ROOT ROOT ROOT ROOT ROOT
 ROOT ROOT ROOT ROOT ROOT
@@ -134,8 +187,39 @@ ROOT ROOT ROOT ROOT ROOT
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 768px) {
-    .main-content {
-        width: calc(100vw - var(--sidebar-width));
+@media only screen and (min-width: 400px) {
+    .main-bg img {
+        width: 85%;
     }
 }
+
+@media only screen and (min-width: 567px) {
+    .main-bg img {
+        width: 180%;
+    }
+    .hero-section .section-content .media-content {
+        flex-direction: row;
+    }
+    .hero-section .section-content .media-content {
+        margin-top: 0;
+    }
+    .hero-section .section-content .text-content {
+        align-self: center;
+    }
+    .section-content {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main-bg img {
+        width: 180%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .main-bg img {
+        width: 130%;
+    }
+}
+

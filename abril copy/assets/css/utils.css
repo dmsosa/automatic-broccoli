@@ -207,6 +207,10 @@ h6,[class*=h6] {
     margin: 0;
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .bold {
     font-weight: 600;
 }

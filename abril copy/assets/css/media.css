@@ -34,3 +34,36 @@ VIDEO VIDEO VIDEO VIDEO
 .app-video-player {
 
 }
+
+/*
+MARQUEE MARQUEE MARQUEE MARQUEE
+MARQUEE MARQUEE MARQUEE MARQUEE
+MARQUEE MARQUEE MARQUEE MARQUEE
+MARQUEE MARQUEE MARQUEE MARQUEE
+MARQUEE MARQUEE MARQUEE MARQUEE
+*/
+.app-marquee, .marquee-wrapper {
+    display: block;
+    width: 100%;
+    line-height: 2.5;
+    transition: outline 0.2s ease;
+    background-color: var(--secondary);
+    cursor: pointer;
+    user-select: none;
+}
+.app-marquee:hover, .marquee-wrapper:hover {
+    outline: solid 0.5rem var(--primary);
+}
+.marquee-wrapper {
+    min-height: 150px;
+    line-height: 2.75;
+    background-color: var(--tertiary);
+}
+.marquee-wrapper marquee {
+    max-width: 100%;
+    display: block;
+}
+.marquee-wrapper marquee img {
+    max-width: 2.5rem;
+    display: block;
+}
