@@ -6,9 +6,13 @@
 }
 
 .main-content {
+    width: calc(100vw - var(--sidebar-width));
     display: block;
     overflow: hidden scroll;
     height: 100vh;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
 /*
 HERO HERO HERO HERO HERO
@@ -79,7 +83,7 @@ HERO HERO HERO HERO HERO
 }
 
 .hero-section .section-content .text-content {
-    align-self: start;
+    align-self: center;
 }
 
 .hero-section .section-content .media-content {
@@ -114,20 +118,26 @@ WAVES WAVES WAVES WAVES WAVES
 */
 .app-wave {
     padding-bottom: var(--wave-padding-bottom);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
-.app-wave.primary svg, [class*='theme-light'] .app-wave.primary svg {
+.app-wave.primary svg {
     fill: var(--bg-primary);
 }
 
-.app-wave.secondary svg, [class*='theme-light'] .app-wave.secondary svg {
+.app-wave.secondary svg {
     fill: var(--bg-secondary);
 }
 
-.app-wave.tertiary svg, [class*='theme-light'] .app-wave.tertiary svg {
+.app-wave.tertiary svg {
     fill: var(--bg-tertiary);
 }
 
-[class*='theme-dark'] .app-wave.primary svg {
+/* [class*='theme-dark'] .app-wave.primary svg {
     fill: var(--bg-primary-dark);
 }
 
@@ -137,7 +147,7 @@ WAVES WAVES WAVES WAVES WAVES
 
 [class*='theme-dark'] .app-wave.tertiary svg {
     fill: var(--bg-tertiary-dark);
-}
+} */
 /*
 ROOT ROOT ROOT ROOT ROOT
 ROOT ROOT ROOT ROOT ROOT
@@ -204,7 +214,7 @@ ROOT ROOT ROOT ROOT ROOT
         margin-top: 0;
     }
     .hero-section .section-content .text-content {
-        align-self: center;
+        align-self: start;
     }
     .section-content {
         flex-direction: row;

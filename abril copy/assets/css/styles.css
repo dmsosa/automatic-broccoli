@@ -6,9 +6,10 @@ ROOT ROOT ROOT ROOT ROOT
 ROOT ROOT ROOT ROOT ROOT
 */
 :root {
-    --container-pad: 0.75rem;
+    --container-pad: 3.75rem;
     --container-ms: 0.5rem;
     --container-me: 0.5rem;
+    --section-padding-top: 5.55rem;
     --app-gap: 0.5rem;
     --app-border: solid 0.35rem;
     --app-border-radius: 0.5rem;
@@ -65,7 +66,7 @@ body {
     width: 100vw;
     overflow: hidden;
 }
-body.dark-theme {
+body.dark-theme, body[data-theme="dark"] {
     background-color: var(--dark);
     color: var(--light);
     --bg-primary: var(--dark);
@@ -76,6 +77,7 @@ body.dark-theme {
     --color-tertiary: var(--light-3);
 }
 .container {
+    max-width: 100%;
     padding: var(--container-pad);
     margin-left: var(--container-ms);
     margin-right: var(--container-me)
@@ -100,9 +102,10 @@ div#page-wrapper {
 
 
 
-section {
+section:not(.hero-section) {
     position: relative;
-    border-top: 1rem solid lightgoldenrodyellow;
+    padding-top: var(--section-padding-top);
+    max-width: 100%;
 }
 section.bg-primary {
     background-color: var(--bg-primary);
