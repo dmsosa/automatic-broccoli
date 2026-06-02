@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star wars API</title>
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/keyframes.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/tables.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/dropdown.css">
+</head>
+<body class="body" data-theme="dark">
+    <div id="page-wrapper" class="page-wrapper">
+        <aside id="sidebar" class="sidebar" aria-roledescription="sidebar for the webpage">
+            <div class="sidebar-header"></div>
+            <div class="sidebar-body">
+                <ul>
+                    <li>Home</li>
+                    <li>Books</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <div class="d-flex-default">
+                    <span>Learn more</span>
+                    <i class="icon">i</i>
+                </div>
+            </div>
+        </aside>
+        <div id="main-content" class="main-content" aria-roledescription="page content">
+            <header id="header" class="header">
+                <nav class="navbar navbar-collapse">
+                    <a href="/" class="brand-logo">
+                        <span>Web CC</span>
+                        <img src="./assets/img/logo.png" alt="turtle's logo">
+                    </a>
+                    <button class="nav-dropdown-toggler btn" aria-controls="nav-dropdown-menu" aria-expanded="false">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                                <path d="M 97.529 101.228 L 398.877 98.022" id="line1"></path>
+                                <path d="M 101.804 251.367 L 403.152 248.161" id="line2"></path>
+                                <path d="M 100.735 404.178 L 402.083 400.972" id="line3"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="nav-dropdown-menu bg-secondary" id="nav-dropdown-menu">
+                        <ul class="navbar-ul">
+                            <li class="bg-tertiary"><a href="#" class="link">Login</a></li>
+                            <li class="bg-tertiary"><a href="#" class="link">Search</a></li>
+                            <li class="bg-tertiary"><a href="#" class="link">Settings</a></li>
+                            <hr>
+                            <li class="dropdown-wrapper">
+                                <a class="dropdown-toggler link">
+                                    <span>More</span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <ul class="dropdown-ul">
+                                        <li class="dropdown-option"><a href="#" class="link">Link</a></li>
+                                        <li class="dropdown-option"><a href="#" class="link">To</a></li>
+                                        <li class="dropdown-option"><a href="#" class="link">other</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main id="main" class="snap-wrapper">
+                <section class="snap-child hero-section bg-primary" aria-description="hero-section">
+                    <div class="main-bg">
+                        <div class="clipper active">
+                            <picture>
+                                <source type="image/webp" srcset="./assets/img/hero/herobg-lg.webp" media="(min-width: 1024px) and (prefers-color-scheme: dark)">
+                                <source type="image/webp" srcset="./assets/img/hero/herobg-lg.webp" media="(min-width: 768px) and (prefers-color-scheme: dark)">
+                                <source type="image/webp" srcset="./assets/img/hero/herobg-md.webp" media="(min-width: 498px) and (prefers-color-scheme: dark)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-sm.jpg" media="(min-width: 300px) and (prefers-color-scheme: dark)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-light-lg.jpg" media="(min-width: 1024px) and (prefers-color-scheme: light)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-light-lg.jpg" media="(min-width: 768px) and (prefers-color-scheme: light)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg-light-md.jpg" media="(min-width: 498px) and (prefers-color-scheme: light)">
+                                <source type="image/jpeg" srcset="./assets/img/hero/herobg-light-sm.jpeg" media="(min-width: 300px) and (prefers-color-scheme: light)">
+                                <img src="./assets/img/hero/herobg-lg.webp" alt="default hero background" role="presentation">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="text-content">
+                            <h1 class="text-wrap uppercase">
+                                <div class="split">
+                                    <span class="line linesymbol active">Star</span>
+                                </div>
+                                <div class="split">
+                                    <span class="line active">Wars</span>
+                                </div>
+                            </h1>
+                        </div>
+                        <div class="media-content">
+                            <p class="h6 uppercase bold m-0 text-wrap">
+                                <span class="line wrap active">
+                                    Hey now, you're planet
+                                </span>
+                            </p>
+                            <p class="h6 uppercase bold m-0 text-wrap">
+                                <span class="line wrap active">
+                                    Each of the nine episodic films begins with nearly identical openings, with the text "A long time ago in a galaxy far, far away.…" is displayed, followed by the Star Wars logo over a field of stars.
+                                </span>
+                            </p>
+                            <a href="#section1" class="h6 btn btn-primary bold btn-marquee">
+                                <span>START</span>
+                                <marquee behavior="scroll" direction="right">START</marquee>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="snap-child bg-secondary" aria-description="section-table">
+                    <div class="app-wave primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <div class="container box">
+                        <h2>Responsive images with srcset</h2>
+                        <img 
+                        class="img-block" 
+                        src="./assets/img/flamingo-fallback.jpg" 
+                        alt="responsive img tag"
+                        srcset="
+                        ./assets/img/animals/flamingo3x.jpg 400w, 
+                        ./assets/img/animals/turtles.jpg 800w,
+                        ./assets/img/animals/cute.jpg 1000w,
+                        "
+                        sizes="
+                        (min-width: 320px) 400px
+                        (min-width: 768px) 800px,
+                        (min-width: 1024px) 1000px
+                        " >
+                        <h2>Picture tag example</h2>
+                        <picture>
+                            <img class="img-block" src="./assets/img/animals/nemo.jpg" alt="Nemo's photo">
+                            <source srcset="./assets/img/animals/cute.jpg" media="(prefers-color-scheme: dark)">
+                            <source srcset="./assets/img/animals/flamingo3x.jpg" media="(width >= 300px)">
+                        </picture>
+                        <h2>Usemap: Latin america!</h2>
+                        <img id="samerica" class="img-block" src="./assets/img/mapa png.png" alt="South america's maps" usemap="#samap">
+                        <map name="samap">
+                            <area target="_blank" alt="Argentina" title="Argentina" href="https://de.wikipedia.org/wiki/Argentinien" coords="370,983,353,973,365,950,349,877,303,678,323,582,358,566,401,591,423,610,434,663,446,653,445,718,454,751,470,762,482,775,475,791,443,801,417,801,403,805,421,825,391,837,394,858,402,878,394,947,415,947,410,970,400,998" shape="poly">
+                            <area target="_blank" alt="Brasil" title="Brasil" href="https://de.wikipedia.org/wiki/Brasilien" coords="379,141,348,156,344,182,332,193,308,201,276,193,267,198,270,218,267,242,263,262,244,294,223,294,214,322,224,344,247,345,267,346,262,357,284,350,323,345,331,357,336,377,390,404,426,422,434,452,455,494,455,521,484,538,496,565,507,592,518,610,507,640,482,656,483,674,506,684,519,697,532,673,540,661,551,656,558,606,616,556,650,541,670,412,724,333,720,289,663,264,620,256,578,266,578,234,559,224,530,250,515,233,487,234,512,188,503,150,494,172,432,176,403,189,388,189" shape="poly">
+                            <area target="_self" alt="Venezuela" title="Venezuela" href="https://de.wikipedia.org/wiki/Venezuela" coords="310,186,324,173,318,133,360,130,362,99,365,68,340,54,289,46,269,28,246,35,249,58,237,74,224,62,222,39,220,56,225,74,225,88,250,86,257,95,284,100,286,122,284,141,287,158,296,170,299,178" shape="poly">
+                            <area target="_self" alt="Kolumbien" title="Kolumbien" href="https://de.wikipedia.org/wiki/Kolumbien" coords="218,29,187,49,168,77,152,97,158,137,150,160,132,177,156,197,175,190,199,218,219,236,239,233,248,249,254,228,244,208,243,189,247,174,275,166,275,117,251,117,240,100,226,104,210,76,207,54" shape="poly">
+                            <area target="" alt="Paraguay" title="Paraguay" href="https://de.wikipedia.org/wiki/Paraguay" coords="412,514,388,518,380,541,394,561,422,577,456,598,446,617,460,625,471,622,480,613,479,589,470,587,460,562,446,557,426,553,422,522" shape="poly">
+                        </map>
+                    </div>
+                </section>
+                <section class="snap-child bg-tertiary" aria-description="section-marquee">
+                    <div class="app-wave secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
+                        </svg>
+                    </div>
+                    <div class="section-content">
+                        <div class="text-content">
+                            <h2 id="section-2" class="text-wrapper uppercase mb-0">
+                                <div class="split">
+                                    <span class="line active">marquees</span>
+                                </div>
+                                <div class="split">
+                                    <span class="line active">awesome!</span>
+                                </div>
+                            </h2>
+                            <p class="text-wrapper mb">
+                                <div class="split">
+                                    <span class="line active">(these are deprecated)</span>
+                                </div>
+                            </p>
+                        </div>
+                        <div class="media-content">
+                            <marquee behavior="scroll" direction="right" class="app-marquee">From left to right</marquee>
+                            <marquee behavior="alternate" direction="up" width="auto" height="40" scrollamount="2" bgcolor="darkgray">This text will scroll from bottom to top slowly</marquee>
+                            <marquee
+                            class="marquee-wrapper"
+                            direction="down"
+                            width="250"
+                            height="200"
+                            behavior="alternate">
+                                <marquee behavior="alternate" direction="top">
+                                    <img src="./assets/img/dvd-logo.png" alt="dvd logo">
+                                </marquee>
+                            </marquee>
+                        </div>
+                    </div>  
+                    <div class="section-content vertical">
+                        <div class="text-content ">
+                            <h2 id="section-2" class="text-wrapper uppercase mb-0">
+                                <div class="split">
+                                    <span class="line active">custom with</span>
+                                </div>
+                                <div class="split">
+                                    <span class="line active">js</span>
+                                </div>
+                            </h2>
+                        </div>
+                        <div class="media-content">
+                            <div class="marquee-ds">
+                                <span>Hello</span>
+                                <span>Hello</span>
+                                <span>Hello</span>
+                                <span>Hello</span>
+                                <span>Hello</span>
+                            </div>
+                        </div>
+                    </div>   
+                </section>
+                <section class="sanp-child bg-primary" aria-description="section-table">
+                    <div class="app-wave tertiary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
+                        </svg>
+                    </div>
+                    <div class="container table-wrapper">
+                        <table class="app-table">
+                            <thead>
+                                <th>id</td>
+                                <th>name</td>
+                                <th>email</td>
+                                <th>password</td>
+                                <th>birthdate</td>
+                                <th>photo</td>
+                                <th>jedi</td>
+                                <th>phrase</td>
+                                <th>types</td>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Anakin</td>
+                                    <td>skywalwer@sw.com</td>
+                                    <td>*****</td>
+                                    <td>13/02/1993</td>
+                                    <td><img src="https://pbs.twimg.com/media/FI7FOJoXwAU4kh1.png" alt="anakin"></td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="table-svg svg-danger" viewBox="0 0 24 24" fill="none">
+                                            <path  fill="blue" fill-rule="evenodd" clip-rule="evenodd" d="M9.55879 3.6972C10.7552 2.02216 13.2447 2.02216 14.4412 3.6972L14.6317 3.96387C14.8422 4.25867 15.1958 4.41652 15.5558 4.37652L16.4048 4.28218C18.3156 4.06988 19.9301 5.68439 19.7178 7.59513L19.6235 8.44415C19.5835 8.8042 19.7413 9.15774 20.0361 9.36831L20.3028 9.55879C21.9778 10.7552 21.9778 13.2447 20.3028 14.4412L20.0361 14.6317C19.7413 14.8422 19.5835 15.1958 19.6235 15.5558L19.7178 16.4048C19.9301 18.3156 18.3156 19.9301 16.4048 19.7178L15.5558 19.6235C15.1958 19.5835 14.8422 19.7413 14.6317 20.0361L14.4412 20.3028C13.2447 21.9778 10.7553 21.9778 9.55879 20.3028L9.36831 20.0361C9.15774 19.7413 8.8042 19.5835 8.44414 19.6235L7.59513 19.7178C5.68439 19.9301 4.06988 18.3156 4.28218 16.4048L4.37652 15.5558C4.41652 15.1958 4.25867 14.8422 3.96387 14.6317L3.6972 14.4412C2.02216 13.2447 2.02216 10.7553 3.6972 9.55879L3.96387 9.36831C4.25867 9.15774 4.41652 8.8042 4.37652 8.44414L4.28218 7.59513C4.06988 5.68439 5.68439 4.06988 7.59513 4.28218L8.44415 4.37652C8.8042 4.41652 9.15774 4.25867 9.36831 3.96387L9.55879 3.6972ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L11.8882 14.526C11.3977 15.0166 10.6023 15.0166 10.1118 14.526L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"/>
+                                        </svg>
+                                    </td>
+                                    <td>"This is where the fun begins."</td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55879 3.6972C10.7552 2.02216 13.2447 2.02216 14.4412 3.6972L14.6317 3.96387C14.8422 4.25867 15.1958 4.41652 15.5558 4.37652L16.4048 4.28218C18.3156 4.06988 19.9301 5.68439 19.7178 7.59513L19.6235 8.44415C19.5835 8.8042 19.7413 9.15774 20.0361 9.36831L20.3028 9.55879C21.9778 10.7552 21.9778 13.2447 20.3028 14.4412L20.0361 14.6317C19.7413 14.8422 19.5835 15.1958 19.6235 15.5558L19.7178 16.4048C19.9301 18.3156 18.3156 19.9301 16.4048 19.7178L15.5558 19.6235C15.1958 19.5835 14.8422 19.7413 14.6317 20.0361L14.4412 20.3028C13.2447 21.9778 10.7553 21.9778 9.55879 20.3028L9.36831 20.0361C9.15774 19.7413 8.8042 19.5835 8.44414 19.6235L7.59513 19.7178C5.68439 19.9301 4.06988 18.3156 4.28218 16.4048L4.37652 15.5558C4.41652 15.1958 4.25867 14.8422 3.96387 14.6317L3.6972 14.4412C2.02216 13.2447 2.02216 10.7553 3.6972 9.55879L3.96387 9.36831C4.25867 9.15774 4.41652 8.8042 4.37652 8.44414L4.28218 7.59513C4.06988 5.68439 5.68439 4.06988 7.59513 4.28218L8.44415 4.37652C8.8042 4.41652 9.15774 4.25867 9.36831 3.96387L9.55879 3.6972ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L11.8882 14.526C11.3977 15.0166 10.6023 15.0166 10.1118 14.526L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="#323232"/>
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55879 3.6972C10.7552 2.02216 13.2447 2.02216 14.4412 3.6972L14.6317 3.96387C14.8422 4.25867 15.1958 4.41652 15.5558 4.37652L16.4048 4.28218C18.3156 4.06988 19.9301 5.68439 19.7178 7.59513L19.6235 8.44415C19.5835 8.8042 19.7413 9.15774 20.0361 9.36831L20.3028 9.55879C21.9778 10.7552 21.9778 13.2447 20.3028 14.4412L20.0361 14.6317C19.7413 14.8422 19.5835 15.1958 19.6235 15.5558L19.7178 16.4048C19.9301 18.3156 18.3156 19.9301 16.4048 19.7178L15.5558 19.6235C15.1958 19.5835 14.8422 19.7413 14.6317 20.0361L14.4412 20.3028C13.2447 21.9778 10.7553 21.9778 9.55879 20.3028L9.36831 20.0361C9.15774 19.7413 8.8042 19.5835 8.44414 19.6235L7.59513 19.7178C5.68439 19.9301 4.06988 18.3156 4.28218 16.4048L4.37652 15.5558C4.41652 15.1958 4.25867 14.8422 3.96387 14.6317L3.6972 14.4412C2.02216 13.2447 2.02216 10.7553 3.6972 9.55879L3.96387 9.36831C4.25867 9.15774 4.41652 8.8042 4.37652 8.44414L4.28218 7.59513C4.06988 5.68439 5.68439 4.06988 7.59513 4.28218L8.44415 4.37652C8.8042 4.41652 9.15774 4.25867 9.36831 3.96387L9.55879 3.6972ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L11.8882 14.526C11.3977 15.0166 10.6023 15.0166 10.1118 14.526L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="#323232"/>
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55879 3.6972C10.7552 2.02216 13.2447 2.02216 14.4412 3.6972L14.6317 3.96387C14.8422 4.25867 15.1958 4.41652 15.5558 4.37652L16.4048 4.28218C18.3156 4.06988 19.9301 5.68439 19.7178 7.59513L19.6235 8.44415C19.5835 8.8042 19.7413 9.15774 20.0361 9.36831L20.3028 9.55879C21.9778 10.7552 21.9778 13.2447 20.3028 14.4412L20.0361 14.6317C19.7413 14.8422 19.5835 15.1958 19.6235 15.5558L19.7178 16.4048C19.9301 18.3156 18.3156 19.9301 16.4048 19.7178L15.5558 19.6235C15.1958 19.5835 14.8422 19.7413 14.6317 20.0361L14.4412 20.3028C13.2447 21.9778 10.7553 21.9778 9.55879 20.3028L9.36831 20.0361C9.15774 19.7413 8.8042 19.5835 8.44414 19.6235L7.59513 19.7178C5.68439 19.9301 4.06988 18.3156 4.28218 16.4048L4.37652 15.5558C4.41652 15.1958 4.25867 14.8422 3.96387 14.6317L3.6972 14.4412C2.02216 13.2447 2.02216 10.7553 3.6972 9.55879L3.96387 9.36831C4.25867 9.15774 4.41652 8.8042 4.37652 8.44414L4.28218 7.59513C4.06988 5.68439 5.68439 4.06988 7.59513 4.28218L8.44415 4.37652C8.8042 4.41652 9.15774 4.25867 9.36831 3.96387L9.55879 3.6972ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L11.8882 14.526C11.3977 15.0166 10.6023 15.0166 10.1118 14.526L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="#323232"/>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Squirtle</td>
+                                    <td>Water</td>
+                                    <td>Yes</td>
+                                    <td><img src="https://preview.redd.it/image-squirtle-is-absolutely-awesome-anyone-remember-in-the-v0-oj0d97dt11461.jpg?auto=webp&s=ab800b1cd64ecb72b39e5fa33f98a95d7c6fcce6" alt="Squirtle image"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Charmander</td>
+                                    <td>Fire</td>
+                                    <td>Yes</td>
+                                    <td><img src="https://cdn0.heartbase.gg/user_pictures/1598000/1598893/256.jpg?1706723418" alt="Charmander image"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Pikachu</td>
+                                    <td>Electric</td>
+                                    <td>No</td>
+                                    <td><img src="https://www.fomostore.in/cdn/shop/files/BISTAM375_1_819d72f0-fb42-459e-8eec-2d70e9888a19.jpg?v=1751272333&width=1920" alt="Pikachu image"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="custom-table">
+                            <caption>
+                                This is some fake data from Swapi
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>name</th>
+                                    <th>mass</th>
+                                    <th>planet</th>
+                                    <th>vehicle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Luke Skywalker</td>
+                                    <td>Fake</td>
+                                    <td>Data</td>
+                                    <td>Api</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Luke Skywalker</td>
+                                    <td>Fake</td>
+                                    <td>Data</td>
+                                    <td>Api</td>
+                                </tr>
+                                                                <tr>
+                                    <td>1</td>
+                                    <td>Luke Skywalker</td>
+                                    <td>Fake</td>
+                                    <td>Data</td>
+                                    <td>Api</td>
+                                </tr>
+                                                                <tr>
+                                    <td>1</td>
+                                    <td>Luke Skywalker</td>
+                                    <td>Fake</td>
+                                    <td>Data</td>
+                                    <td>Api</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <form class="app-form" id="register-character-form">
+                            <caption>Register your character</caption>
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="name">name</label>
+                                <input type="text" name="name" id="name" placeholder="username">
+                            </fieldset class="form-fieldset form-fieldset-text">
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="email">email</label>
+                                <input type="email" name="email" id="email" placeholder="email" value="manuel@fake.com"> 
+                            </fieldset class="form-fieldset form-fieldset-text">
+                            <fieldset>
+                                <label for="password">password</label>
+                                <input type="password" name="password" id="password" placeholder="password">
+                            </fieldset class="form-fieldset form-fieldset-text">
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="birthdate">birthdate</label>
+                                <input type="date" name="birthdate" id="birthdate">
+                            </fieldset>
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="photo">photo</label>
+                                <input type="file" name="photo" id="photo">
+                            </fieldset>
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="jedi">is dark side?</label>
+                                <input type="checkbox" name="jedi" id="jedi">
+                            </fieldset>
+                            <fieldset>
+                                <label for="phrase"></label>
+                                <textarea name="phrase" id="phrase"></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <label for="letter">Presentation Letter</label>
+                                <select name="types" id="business">
+                                    <option value="A">IT</option>
+                                    <option value="b">Medicine</option>
+                                    <option value="c">Education</option>
+                                </select>
+                            </fieldset>
+                            <div class="d-flex">
+                                <button class="btn btn-primary" type="submit" data-role="submit">confirm</button>
+                                <button class="btn btn-danger" type="submit" data-role="clear">cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="snap-child bg-secondary" aria-description="media-section">
+                    <div class="app-wave primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M1200 0L0 0 598.97 114.72 1200 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="container">
+                        Video demonstration
+                        <video controls autoplay muted loop class="app-video">
+                            <source src="/abril/assets/media/bible.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="container">
+                        Audio tag is really useful!
+                        <audio controls>
+                            <source src="./assets/media/linkin.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </section>
+                <section class="snap-child bg-tertiary" aria-description="form-section">
+                    <div class="app-wave secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
+                        </svg>
+                    </div>
+                    <div class="container">
+                        <form action="Hey">
+                            <caption>example Form</caption>
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username" placeholder="username">
+                            </fieldset class="form-fieldset form-fieldset-text">
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="username">email</label>
+                                <input type="email" name="email" id="email" placeholder="email">
+                            </fieldset class="form-fieldset form-fieldset-text">
+                            <fieldset>
+                                <label for="password">password</label>
+                                <input type="password" name="password" id="password" placeholder="password">
+                            </fieldset class="form-fieldset form-fieldset-text">
+                            <fieldset class="form-fieldset form-fieldset-text">
+                                <label for="birthdate">Birthdate</label>
+                                <input type="date" name="birthdate" id="birthdate" placeholder="consent">
+                            </fieldset>
+                            <fieldset>
+                                <label for="business">Business Area</label>
+                                <select name="business" id="business">
+                                    <option value="IT">IT</option>
+                                    <option value="Medicine">Medicine</option>
+                                    <option value="Education">Education</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <label for="letter">Presentation Letter</label>
+                                <textarea name="letter" id="letter"></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <label for="consent">Consent the Terms and Conditions</label>
+                                <input type="checkbox" name="consent" id="consent" placeholder="consent">
+                            </fieldset>
+                        </form>
+                        <div class="d-flex-default"><button class="btn btn-primary"></button><button class="btn btn-danger"></button></div>
+                    </div>
+                    <div class="container">
+                        Audio tag is really useful!
+                        <audio controls>
+                            <source src="./assets/media/numb.mp4" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </section>
+            </main>
+            <footer id="footer" class="footer bg-primary">
+                <div class="app-wave tertiary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script defer type="module" src="./assets/js/app.js"></script>
+</html>

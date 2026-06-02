@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/script.js"></script>
+    <title>Examen mayo</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="#">
+                <img src="assets/images/logo.png" alt="logo">
+                <span>Examen mayo</span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="close">
+                    <span>para aprender el uso de etiquetas semanticas</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="content content-flex">
+                <div class="content-media">
+                    <img src="./assets/images/content-image-1.jpg" 
+                    alt="content-image-1" 
+                    class="content-image">
+                    <h2 class="content-title">welcome to tables with css</h2>
+                    <h3 class="text-italic">Here, I'm using :first-child() to make this section higher than others.</h3>
+                </div>
+                <div>                
+                    <table class="app-table" id="pokemon-table">
+                    <thead>
+                        <tr>
+                            <th><span>ID</span></th>
+                            <th><span>name</span></th>
+                            <th><span>types</span></th>
+                            <th><span>seen</span></th>
+                            <th><span>img</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>0001</span></td>
+                            <td><span>Bulbasaur</span></td>
+                            <td><span>Green, Poison</span></td>
+                            <td><span>Check</span></td>
+                            <td><span><img src="./assets/images/001.png" alt="" srcset=""></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>0004</span></td>
+                            <td><span>Charmander</span></td>
+                            <td><span>Green, Poison</span></td>
+                            <td><span>No check</span></td>
+                            <td><span><img src="./assets/images/004.png" alt="" srcset=""></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>0007</span></td>
+                            <td><span>Squirtle</span></td>
+                            <td><span>Water</span></td>
+                            <td><span>Check</span></td>
+                            <td><span><img src="./assets/images/007.png" alt="" srcset=""></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>0025</span></td>
+                            <td><span>Pikachu</span></td>
+                            <td><span>Electric</span></td>
+                            <td><span>No check</span></td>
+                            <td><span><img src="./assets/images/025.png" alt="" srcset=""></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>0016</span></td>
+                            <td><span>Pidgey</span></td>
+                            <td><span>Flying</span></td>
+                            <td><span>No check</span></td>
+                            <td><span><img src="./assets/images/016.png" alt="" srcset=""></span></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-text">
+                    <h3 class="content-title text-center">Unordered Lists</h3>
+                    <ol class="custom-ol">
+                        <li>Pokémon Es la combinación de las palabras “Pocket” y “Monster”, que traducidas significan “Monstruos de Bolsillo”</li>
+                        <li>El creador de Pokémon era un apasionado de los insectos</li>
+                        <li>Pikachu: proviene de los sonidos japoneses “pika” (chispa) y “chu” (ratón)</li>
+                        <li>en 2001, se lanzó una moneda real y de curso legal en una isla del Pacífico con la cara de Pikachu. ¡Una buena forma de ahorrar!</li>
+                    </ol>
+                </div>
+            </div>
+        </section>  
+        <section>
+            <div class="content content-flex">
+                <div class="content-text">
+                    <h2 class="content-title">Lang() pseudo-class</h2>                
+                    <p class="app-p" lang="en-US">
+                    Music during road trips and long commutes aren't a problem, but using
+                    headphones isn't the best thing to do while driving in your car.
+                    </p>
+
+                    <p class="app-p" lang="pl-PL">
+                    Gdy widzimy znak z narysowaną czaszką i napisem
+                    <strong lang="en-US">DANGER</strong> to lepiej nie wchodzić do środka.
+                    </p>
+                </div>
+                <div class="content-media form-wrapper">
+                    <form action="" class="app-form" id="pokemon-form" aria-controls="pokemon-table">
+                        <fieldset class="app-form-fieldset">
+                            <label for="pokemon-form-name"></label>
+                            <input type="text" name="name" id="pokemon-form-name" placeholder="name">
+                        </fieldset>
+                        <fieldset class="app-form-fieldset">
+                            <label for="pokemon-form-types"></label>
+                            <select name="types" id="pokemon-form-types">
+                                <option value="electric">electric</option>
+                                <option value="grass">grass</option>
+                                <option value="fire">fire</option>
+                                <option value="water">water</option>
+                                <option value="flying">flying</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="app-form-fieldset d-flex">
+                            <label for="pokemon-form-seen"></label>
+                            <input type="checkbox" name="seen" id="pokemon-form-seen">
+                        </fieldset>
+                        <fieldset class="app-form-fieldset">
+                            <label for="pokemon-form-imgurl"></label>
+                            <input type="text" name="imgurl" id="pokemon-form-imgurl">
+                        </fieldset>
+                        <div class="d-flex app-form-buttons">
+                            <button type="submit" class="btn btn-primary">Confirm</button>
+                            <button role="cancel" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>      
+        <section>
+            <div class="content content-flex">
+                <div class="content-text box-shadow-fun">
+                    <h2 class="content-title">Only-child() pseudo-class</h2>                
+                    <p class="app-p" lang="pl-PL">
+                    I'm alone.
+                    </p>
+                </div>
+                <div class="content-media">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="left-footer">
+            <h3>Quick Links</h3>
+            <p>
+                <ul>
+                    <li>
+                        <a href="javascript:void()">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">Overview</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">Features</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">About</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">Subcription</a>
+                    </li>
+                </ul>
+            </p>
+        </div>
+
+        <div id="right-footer">
+            <h3>Follow me on</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://web.facebook.com/rifky.ilmi/">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/y_ilmimr/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/RifkiIlmi">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>This website is developed by MRiL</p>
+        </div>
+    </footer>
+</body>
+
+</html>
