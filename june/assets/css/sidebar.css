@@ -21,13 +21,18 @@ SIDEBAR SIDEBAR SIDEBAR SIDEBAR
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
-    width: var(--sidebar-width);
+    width: 0;
+    overflow: hidden;
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
     transition: all 0.4s ease;
     box-shadow: var(--sidebar-box-shadow);
     z-index: 1000;
+}
+
+.sidebar.active {
+    width: var(--sidebar-width);
 }
 
 .sidebar-header {
@@ -64,9 +69,7 @@ SIDEBAR SIDEBAR SIDEBAR SIDEBAR
     }
 }
 
-.sidebar.active {
-    width: var(--sidebar-width);
-}
+
 
 @media only screen and (min-width: 400px) {
     .sidebar {

@@ -4,3 +4,4 @@ import "./carousel.js";
 import "./dropdown.js";
 import "./marquee.js";
 import "./forms.js";
+import "./sidebar.js";
