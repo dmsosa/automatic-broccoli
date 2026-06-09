@@ -1,0 +1,81 @@
+
+/*
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR 
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR
+SIDEBAR SIDEBAR SIDEBAR SIDEBAR
+*/
+:root {
+    --sidebar-width: 160px;
+    --sidebar-box-shadow: rgba(0, 0, 0, 0.33) 5px 3px 8px;
+}
+
+.sidebar {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: var(--sidebar-width);
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+    box-shadow: var(--sidebar-box-shadow);
+    z-index: 1000;
+}
+
+.sidebar-header {
+    height: var(--app-header-height);
+    background-color: rgba(0, 0, 128, 0.525);
+}
+
+.sidebar-body {
+    overflow: hidden scroll;
+    max-height: calc(100% - (var(--app-header-height) * 2));
+}
+
+.sidebar-body::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    background-color: red;
+}
+
+@supports selector(::-webkit-scrollbar) {
+    .sidebar-body::-webkit-scrollbar {
+        width: 0.4rem;
+        height: 80%;
+        max-height: 80%;
+        margin: auto;
+        display: block;
+        background-color: var(--dark);
+    }
+
+    .sidebar-body::-webkit-scrollbar-button {
+        background-color: red;
+    }
+}
+
+.sidebar.active {
+    width: var(--sidebar-width);
+}
+
+@media only screen and (min-width: 400px) {
+    .sidebar {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        display: flex;
+    }
+}

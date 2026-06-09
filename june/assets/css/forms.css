@@ -1,0 +1,891 @@
+input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app-form {
+    position: relative;
+    padding: 2rem 4rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.app-form fieldset {
+    position: relative;
+    border-radius: 20px;
+    margin: 0.125rem;
+    padding: 0.25rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-form label {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]
+{
+
+}
+
+/* 1) Foundation (primitive tokens) */
+:root {
+
+/* PX to REM/EM scale */
+    --px-0: 0rem;
+    --px-048: 0.03rem;
+    --px-1: 0.0625rem;
+    --px-2: 0.125rem;
+    --px-4: 0.25rem;
+    --px-8: 0.5rem;
+    --px-12: 0.75rem;
+    --px-14: 0.875rem;
+    --px-16: 1rem;
+    --px-18: 1.125rem;
+    --px-20: 1.25rem;
+    --px-24: 1.5rem;
+    --px-28: 1.75rem;
+    --px-32: 2rem;
+    --px-36: 2.25rem;
+    --px-40: 2.5rem;
+    --px-48: 3rem;
+    --px-56: 3.5rem;
+    --px-64: 4rem;
+    --px-72: 4.5rem;
+    --px-96: 6rem;
+    --px-120: 7.5rem;
+    --px-240: 15rem;
+    --px-320: 20rem;
+    --px-480: 30rem;
+    --px-768: 48rem;
+    --px-1024: 64rem;
+    --px-1200: 75rem;
+    --px-1280: 80rem;
+    --px-1440: 90rem;
+
+/* PX to REM/EM scale */
+    --lh-ratio-sm: 112.5%;
+    --lh-ratio-md: 125%;
+    --lh-ratio-lg: 150%;
+
+/* Typography */
+    --font-family-display: "Lora", serif;
+    --font-family-headers: "Poppins", sans-serif;
+    --font-family-body: "OpenSans", sans-serif;
+    --font-family-ipa: "FiraSans", sans-serif;
+    --font-family-international: "NatoSans", sans-serif;
+
+    --font-weight-thin: 100;
+    --font-weight-light: 200;
+    --font-weight-book: 300;
+    --font-weight-regular:400;
+    --font-weight-medium: 500; 
+    --font-weight-demibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-heavy: 900;
+
+    --style-italic: italic;
+    --style-solid: solid;
+    --style-dashed: dashed;
+    --style-dotted: dotted;
+    --style-underline: underline;
+    --style-overline: overline;
+    --style-through: line-through;
+
+/* Responsive typography */
+    --fluid-px-12: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);       /* 12px */
+    --fluid-px-14: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);    /* 14px */
+    --fluid-px-18: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);    /* 18px */
+    --fluid-px-24: clamp(1.125rem, 1rem + 0.7vw, 1.5rem);        /* 24px */
+    --fluid-px-32: clamp(1.5rem, 1.25rem + 0.9vw, 2rem);         /* 32px */
+    --fluid-px-48: clamp(2.25rem, 1.75rem + 1.2vw, 3rem);        /* 48px */
+    --fluid-px-64: clamp(3.5rem,1.43vw + 1.994rem,4rem);         /* 64px */
+    --fluid-px-72: clamp(3.5rem, 2.75rem + 1.8vw, 4.5rem);       /* 72px */
+
+
+/* Aspect ratio */
+    --aspect-ratio-1-1: 1/1;
+    --aspect-ratio-3-2: 3/2;
+    --aspect-ratio-2-3: 2/3;
+    --aspect-ratio-3-4: 3/4;
+    --aspect-ratio-4-3: 4/3;
+    --aspect-ratio-16-9: 16/9;
+    --aspect-ratio-9-16: 9/16;
+    --aspect-ratio-21-9: 21/9;
+
+/* Color foundation */
+
+    --color-greys-black: #121212;
+    --color-greys-darkest: #1F2121;
+    --color-greys-darker: #3F4242;
+    --color-greys-dark: #727676;
+    --color-greys-default: #979D9D;
+    --color-greys-light: #C5CACA;
+    --color-greys-lighter: #E8EDED;
+    --color-greys-lightest: #F7FAFA;
+    --color-greys-white: #FFFFFF;
+   
+    --color-greys-darker40: rgb(63, 66, 66, 0.40);
+    --color-greys-default24: rgb(151, 157, 157, 0.24);
+    --color-greys-lightest48: rgb(247, 250, 250, 0.48);
+    --color-greys-black64: rgb(18, 18, 18, 0.64);
+    --color-greys-black24: rgb(18, 18, 18, 0.24);
+
+    --color-brand-main-darkest: #133844;
+    --color-brand-main-darker: #0c4f56;
+    --color-brand-main-dark: #007c85;
+    --color-brand-main-default: #00BDB6;
+    --color-brand-main-light: #8EE8D8;
+    --color-brand-main-lighter: #B8F4EA;
+    --color-brand-main-lightest: #D7FDF5;
+
+    --color-secondary-brand-main-darkest: #05070F;
+    --color-secondary-brand-main-darker: #0F162E;
+    --color-secondary-brand-main-dark: #141D3D;
+    --color-secondary-brand-main-default: #1D2A57;
+    --color-secondary-brand-main-light: #2E428A;
+    --color-secondary-brand-main-lighter: #667CCC;
+    --color-secondary-brand-main-lightest: #E0E5F5;
+
+    --color-brand-accent-darkest: #7F1063;
+    --color-brand-accent-darker: #B6168E;
+    --color-brand-accent-dark: #ce17a0;
+    --color-brand-accent-default: #E94DC2;
+    --color-brand-accent-light: #EF80D3;
+    --color-brand-accent-lighter: #F4A4E0;
+    --color-brand-accent-lightest: #F8C9EC;
+
+    --color-green-darkest: #013600;
+    --color-green-darker: #165C00;
+    --color-green-dark: #2B8000;
+    --color-green-default: #64A347;
+    --color-green-light: #99C489;
+    --color-green-lighter: #C7E0C1;
+    --color-green-lightest: #E8F2E6;
+
+    --color-red-darkest: #7F091D;
+    --color-red-darker: #ab0b1e;
+    --color-red-dark: #e60f2b;
+    --color-red-default: #f44d61;
+    --color-red-light: #f68794;
+    --color-red-lighter: #fbb2ba;
+    --color-red-lightest: #feecee;
+
+    --color-blue-darkest: #062037;
+    --color-blue-darker: #0A365C;
+    --color-blue-dark: #105693;
+    --color-blue-default: #1570BF;
+    --color-blue-light: #3595E9;
+    --color-blue-lighter: #7EBBF1;
+    --color-blue-lightest: #C8E2F9;
+
+    --color-bright-orange-darkest: #9C6507;
+    --color-bright-orange-darker: #C37F09;
+    --color-bright-orange-dark: #EA980B;
+    --color-bright-orange-default: #F4A821;
+    --color-bright-orange-light: #F8C163;
+    --color-bright-orange-lighter: #FAD89E;
+    --color-bright-orange-lightest: #FDF0D8;
+
+    --color-yellow-darkest: #F49E06;
+    --color-yellow-darker: #FBC71C;
+    --color-yellow-dark: #FACB2E;
+    --color-yellow-default: #F6D013;
+    --color-yellow-light: #F9DC4E;
+    --color-yellow-lighter: #F7EBBC;
+    --color-yellow-lightest: #FEFBEB;
+}
+
+/* 2) Alias tokens (roles built from foundation) */
+:root {
+/* White space */
+    --spacing-none:var(--px-0);
+    --spacing-xs:var(--px-4);
+    --spacing-sm:var(--px-8);
+    --spacing-md:var(--px-12);
+    --spacing-lg:var(--px-24);
+    --spacing-xl:var(--px-36);
+    --spacing-3xl:var(--px-48);
+    --spacing-4xl:var(--px-72);
+    --spacing-5xl:var(--px-96);
+    --spacing-6xl:var(--px-120);
+
+/* Element size */
+    --size-none: var(--px-0);
+    --size-3xs: var(--px-1);
+    --size-2xs: var(--px-2);
+    --size-xs: var(--px-4);
+    --size-sm: var(--px-8);
+    --size-md: var(--px-12);
+    --size-lg:var(--px-24);
+    --size-xl:var(--px-36);
+    --size-3xl:var(--px-48);
+    --size-4xl:var(--px-72);
+    --size-pill: var(--px-1200);
+
+/* Aspect ratio */
+    --ar-1-1: var(--aspect-ratio-1-1);
+    --ar-3-2: var(--aspect-ratio-3-2);
+    --ar-2-3: var(--aspect-ratio-2-3);
+    --ar-3-4: var(--aspect-ratio-3-4);
+    --ar-4-3: var(--aspect-ratio-4-3);
+    --ar-16-9: var(--aspect-ratio-16-9);
+    --ar-9-16: var(--aspect-ratio-9-16);
+    --ar-21-9: var(--aspect-ratio-21-9);
+
+/* Neutrals */
+    --color-neutrals-black: var(--color-greys-black);
+    --color-neutrals-darkest: var(--color-greys-darkest);
+    --color-neutrals-darker: var(--color-greys-darker);
+    --color-neutrals-dark: var(--color-greys-dark);
+    --color-neutrals-default: var(--color-greys-default);
+    --color-neutrals-light: var(--color-greys-light);
+    --color-neutrals-lighter: var(--color-greys-lighter);
+    --color-neutrals-lightest: var(--color-greys-lightest);
+    --color-neutrals-white: var(--color-greys-white);
+
+    --color-neutrals-black64: var(--color-greys-black64);
+    --color-neutrals-black24: var(--color-greys-black24);
+    --color-neutrals-darker40: var(--color-greys-darker40);
+    --color-neutrals-default24: var(--color-greys-default24);
+    --color-neutrals-lightest48: var(--color-greys-lightest48);
+
+
+/* D2L primary - Cambridge Blue */
+    --color-d2l-primary-darkest: var(--color-brand-main-darkest);
+    --color-d2l-primary-darker: var(--color-brand-main-darker);
+    --color-d2l-primary-dark: var(--color-brand-main-dark);
+    --color-d2l-primary-default: var(--color-brand-main-default);
+    --color-d2l-primary-light: var(--color-brand-main-light);
+    --color-d2l-primary-lighter: var(--color-brand-main-lighter);
+    --color-d2l-primary-lightest: var(--color-brand-main-lightest);
+
+/* D2L primary - Dictionary Blue */
+    --color-cdo-primary-darkest: var(--color-secondary-brand-main-darkest);
+    --color-cdo-primary-darker: var(--color-secondary-brand-main-darker);
+    --color-cdo-primary-dark: var(--color-secondary-brand-main-dark);
+    --color-cdo-primary-default: var(--color-secondary-brand-main-default);
+    --color-cdo-primary-light: var(--color-secondary-brand-main-light);
+    --color-cdo-primary-lighter: var(--color-secondary-brand-main-lighter);
+    --color-cdo-primary-lightest: var(--color-secondary-brand-main-lightest);
+
+/* D2L secondary/accent - brand-accent */
+    --color-secondary-darkest: var(--color-brand-accent-darkest);
+    --color-secondary-darker: var(--color-brand-accent-darker);
+    --color-secondary-dark: var(--color-brand-accent-dark);
+    --color-secondary-default: var(--color-brand-accent-default);
+    --color-secondary-light: var(--color-brand-accent-light);
+    --color-secondary-lighter: var(--color-brand-accent-lighter);
+    --color-secondary-lightest: var(--color-brand-accent-lightest);
+
+/* D2L success - Green */
+    --color-success-darkest: var(--color-green-darkest);
+    --color-success-darker: var(--color-green-darker);
+    --color-success-dark: var(--color-green-dark);
+    --color-success-default: var(--color-green-default);
+    --color-success-light: var(--color-green-light);
+    --color-success-lighter: var(--color-green-lighter);
+    --color-success-lightest: var(--color-green-lightest);
+
+/* D2L error - Red */
+    --color-error-darkest: var(--color-red-darkest);
+    --color-error-darker: var(--color-red-darker);
+    --color-error-dark: var(--color-red-dark);
+    --color-error-default: var(--color-red-default);
+    --color-error-light: var(--color-red-light);
+    --color-error-lighter: var(--color-red-lighter);
+    --color-error-lightest: var(--color-red-lightest);
+
+/* D2L information - Blue */
+    --color-information-darkest: var(--color-blue-darkest);
+    --color-information-darker: var(--color-blue-darker);
+    --color-information-dark: var(--color-blue-dark);
+    --color-information-default: var(--color-blue-default);
+    --color-information-light: var(--color-blue-light);
+    --color-information-lighter: var(--color-blue-lighter);
+    --color-information-lightest: var(--color-blue-lightest);
+
+/* D2L warning - Orange */
+    --color-warning-darkest: var(--color-bright-orange-darkest);
+    --color-warning-darker: var(--color-bright-orange-darker);
+    --color-warning-dark: var(--color-bright-orange-dark);
+    --color-warning-default: var(--color-bright-orange-default);
+    --color-warning-light: var(--color-bright-orange-light);
+    --color-warning-lighter: var(--color-bright-orange-lighter);
+    --color-warning-lightest: var(--color-bright-orange-lightest);
+
+/* D2L highlights - Yellow */
+    --color-highlight-darkest: var(--color-yellow-darkest);
+    --color-highlight-darker: var(--color-yellow-darker);
+    --color-highlight-dark: var(--color-yellow-dark);
+    --color-highlight-default: var(--color-yellow-default);
+    --color-highlight-light: var(--color-yellow-light);
+    --color-highlight-lighter: var(--color-yellow-lighter);
+    --color-highlight-lightest: var(--color-yellow-lightest);
+
+}
+
+
+
+/* 3) Mapped tokens (semantic usage for light mode) */
+:root {
+
+/* font */
+    --display-text: var(--font-family-display);
+    --header-text: var(--font-family-headers);
+    --body-text: var(--font-family-body);
+    --label-text: var(--font-family-body);
+    --ipa-tex: var(--font-family-ipa);
+    --international-text: var(--font-family-international);
+
+    --font-size-xs: var(--fluid-px-12);     /* 12px */
+    --font-size-sm: var(--fluid-px-14);     /* 14px */
+    --font-size-md: var(--fluid-px-18);     /* 18px */
+    --font-size-lg: var(--fluid-px-24);     /* 24px */
+    --font-size-xl: var(--fluid-px-32);     /* 32px */
+    --font-size-3xl: var(--fluid-px-48);    /* 48px */
+    --font-size-4xl: var(--fluid-px-64);    /* 64px */
+    --font-size-5xl: var(--fluid-px-72);    /* 72px */
+
+    --line-height-sm: var(--lh-ratio-sm);   /* 1.125*/
+    --line-height-md: var(--lh-ratio-md);   /* 1.25*/
+    --line-height-lg: var(--lh-ratio-lg);   /* 1.5*/
+
+/* attributes */
+    --reg: var(--font-weight-regular);
+    --bold: var(--font-weight-bold);
+    --italic: var(--style-italic);
+
+    --solid: var(--style-solid);
+    --dash: var(--style-dashed);
+    --dots: var(--style-dotted);
+    --underline: var(--style-underline);
+    --overline: var(--style-overline);
+    --through: var(--style-through);
+
+
+/* gap */
+    --gap-none: var(--spacing-none);
+    --gap-xs: var(--spacing-xs);
+    --gap-sm: var(--spacing-sm);
+    --gap-md: var(--spacing-md);
+    --gap-lg: var(--spacing-lg);
+    --gap-xs: var(--spacing-xl);
+
+/* padding */
+    --padding-none: var(--spacing-none);
+    --padding-xs: var(--spacing-xs);
+    --padding-sm: var(--spacing-sm);
+    --padding-md: var(--spacing-md);
+    --padding-lg: var(--spacing-lg);
+
+/* margins */
+    --margin-none: var(--spacing-none);
+    --margin-xs: var(--spacing-xs);
+    --margin-sm: var(--spacing-sm);
+    --margin-md: var(--spacing-md);
+    --margin-lg: var(--spacing-lg);
+    --margin-3xl: var(--spacing-3xl);
+    --margin-4xl: var(--spacing-4xl);
+    --margin-5xl: var(--spacing-5xl);
+    --margin-6xl: var(--spacing-6xl);
+
+/* border */
+    --border-width-none: var(--size-none);
+    --border-width-3xs: var(--size-3xs);
+    --border-width-2xs: var(--size-2xs);
+    --border-width-xs: var(--size-xs);
+
+    --border-radius-none: var(--size-none);
+    --border-radius-xs: var(--size-xs);
+    --border-radius-sm: var(--size-sm);
+    --border-radius-md: var(--size-md);
+    --border-radius-lg: var(--size-lg);
+    --border-radius-pill: var(--size-pill);
+
+/* icon size */
+    --icon-xs: var(--size-sm);
+    --icon-sm: var(--px-16);
+    --icon-md: var(--size-lg);
+    --icon-lg: var(--size-xl);
+    --icon-xl: var(--size-3xl);
+
+/*  color text */
+    --color-text-headers: var(--color-neutrals-darkest);
+    --color-text-headers-secondary: var(--color-neutrals-dark);
+    --color-text-body: var(--color-neutrals-darkest);
+    --color-text-body-secondary: var(--color-neutrals-dark);
+    --color-text-action: var(--color-secondary-dark);
+    --color-text-on-mixed-bg: var(--color-neutrals-white);
+    --color-text-on-light-bg: var(--color-neutrals-darkest);
+    --color-text-on-dark-bg: var(--color-neutrals-white);
+
+/* color surface */
+    --color-surface-page-background: var(--color-neutrals-lightest);
+    --color-surface-primary: var(--color-neutrals-white);
+    --color-surface-secondary: var(--color-neutrals-lightest);
+    --color-surface-tertiary: var(--color-neutrals-lighter);
+    --color-surface-dark: var(--color-neutrals-darker);
+    --color-surface-brand: var(--color-d2l-primary-default);
+    --color-surface-cdo-brand: var(--color-cdo-primary-default);
+    --color-surface-action: var(--color-secondary-dark);
+    --color-surface-action-secondary: var(--color-secondary-lightest);
+    --color-surface-success: var(--color-success-dark);
+    --color-surface-success-secondary: var(--color-success-light);
+    --color-surface-error: var(--color-error-dark);
+    --color-surface-error-secondary: var(--color-error-light);
+    --color-surface-information: var(--color-information-dark);
+    --color-surface-information-secondary: var(--color-information-light);
+    --color-surface-warning: var(--color-warning-dark);
+    --color-surface-warning-secondary: var(--color-warning-light);
+    --color-surface-dark-on-hover: var(--color-neutrals-default24%);
+    --color-surface-light-on-hover: var(--color-neutrals-default24%);
+    --color-surface-highlight: var(--color-highlight-default);
+
+/* color border */
+    --color-border-primary: var(--color-neutrals-darker);
+    --color-border-secondary: var(--color-neutrals-light);
+    --color-border-tertiary: var(--color-neutrals-default);
+    --color-border-brand: var(--color-d2l-primary-default);
+    --color-border-cdo-brand: var(--color-cdo-primary-default);
+    --color-border-active: var(--color-secondary-default);
+    --color-border-success: var(--color-success-dark);
+    --color-border-error: var(--color-error-dark);
+    --color-border-warning: var(--color-warning-default);
+    --color-border-information: var(--color-information-dark);
+
+/* color icons */
+    --color-icons-primary: var(--color-neutrals-darkest);
+    --color-icons-secondary: var(--color-neutrals-dark);
+    --color-icons-action: var(--color-secondary-default);
+    --color-icons-on: var(--color-neutrals-white);
+    --color-icons-success: var(--color-success-default);
+    --color-icons-success-secondary: var(--color-success-light);
+    --color-icons-error: var(--color-error-dark);
+    --color-icons-error-secondary: var(--color-error-light);
+    --color-icons-warning: var(--color-warning-default);  
+    --color-icons-warning-secondary: var(--color-warning-lighter);
+    --color-icons-information: var(--color-information-default);
+    --color-icons-information-secondary: var(--color-information-light);
+
+}
+
+/* 4) Auto Dark Mode overrides */
+@media (prefers-color-scheme: dark) {
+    :root {
+
+/* color text */
+    --color-text-headers: var(--color-neutrals-lightest);
+    --color-text-headers-secondary: var(--color-neutrals-light);
+    --color-text-body: var(--color-neutrals-lightest);
+    --color-text-body-secondary: var(--color-neutrals-light);
+    --color-text-action: var(--color-secondary-lighter);
+    --color-text-on-mixed-bg: var(--color-neutrals-darker);
+    --color-text-on-light-bg: var(--color-neutrals-darkest);
+    --color-text-on-dark-bg: var(--color-neutrals-white);
+    
+/* color surface */
+    --color-surface-page-background: var(--color-neutrals-darkest);
+    --color-surface-primary: var(--color-neutrals-darker);
+    --color-surface-secondary: var(--color-neutrals-dark);
+    --color-surface-tertiary: var(--color-neutrals-darker);
+    --color-surface-dark: var(--color-neutrals-lighter);
+    --color-surface-brand: var(--color-d2l-primary-default);
+    --color-surface-cdo-brand: var(--color-cdo-primary-light);
+    --color-surface-action: var(--color-secondary-dark);
+    --color-surface-action-secondary: var(--color-secondary-lightest);
+    --color-surface-success: var(--color-success-light);
+    --color-surface-success-secondary: var(--color-success-lighter);
+    --color-surface-error: var(--color-error-default);
+    --color-surface-error-secondary: var(--color-error-lighter);
+    --color-surface-information: var(--color-information-light);
+    --color-surface-information-secondary: var(--color-information-lighter);
+    --color-surface-warning: var(--color-warning-light);
+    --color-surface-warning-secondary: var(--color-warning-lighter);
+    --color-surface-dark-on-hover: var(--color-neutrals-default24%);
+    --color-surface-light-on-hover: var(--color-neutrals-default24%);
+    --color-surface-highlight: var(--color-highlight-light);
+    
+/* color border */
+    --color-border-primary: var(--color-neutrals-default);
+    --color-border-secondary: var(--color-neutrals-dark);
+    --color-border-tertiary: var(--color-neutrals-default);
+    --color-border-brand: var(--color-d2l-primary-light);
+    --color-border-cdo-brand: var(--color-cdo-primary-light);
+    --color-border-active: var(--color-secondary-light);
+    --color-border-success: var(--color-success-light);
+    --color-border-error: var(--color-error-default);
+    --color-border-warning: var(--color-warning-light);
+    --color-border-information: var(--color-information-light);
+
+    /* color icons */
+    --color-icons-primary: var(--color-neutrals-lightest);
+    --color-icons-secondary: var(--color-neutrals-light);
+    --color-icons-action: var(--color-secondary-default);
+    --color-icons-on: var(--color-neutrals-white);
+    --color-icons-success: var(--color-success-default);
+    --color-icons-success-secondary: var(--color-success-light);
+    --color-icons-error: var(--color-error-dark);
+    --color-icons-error-secondary: var(--color-error-light);
+    --color-icons-warning: var(--color-warning-default);  
+    --color-icons-warning-secondary: var(--color-warning-lighter);
+    --color-icons-information: var(--color-information-default);
+    --color-icons-information-secondary: var(--color-information-light);    
+
+    }
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* Suatomic classes: text styles */
+
+/* Purpose:
+A smaller display style, great for:
+hero sections
+large promotional headers
+landing page highlights */
+        .d2l-text-display-default {
+            font-family: var(--display-text);
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-sm);
+            font-weight: var(--reg);
+        }
+
+/* Purpose
+A smaller display style, great for:
+hero sections
+large promotional headers
+landing page highlights */
+        .d2l-text-display-lg {
+            font-family: var(--display-text);
+            font-size: var(--font-size-4xl);
+            line-height: var(--line-height-sm);
+            font-weight: var(--reg);
+        }
+
+/* Purpose
+The largest text style, ideal for
+hero sections
+large promotional headers
+landing page highlights */
+        .d2l-text-display-xl {
+            font-family: var(--display-text);
+            font-size: var(--font-size-5xl);
+            line-height: var(--line-height-sm);
+            font-weight: var(--reg);
+        }
+
+        /* Purpose
+Title styles provide structured headings for different content sections, offering flexibility in hierarchy.
+A small title, useful for headings on secondary cards. */
+        .d2l-text-title-sm {
+            font-family: var(--header-text);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-lg);
+            font-weight: var(--bold);
+        }
+
+/* Purpose
+Title styles provide structured headings for different content sections, offering flexibility in hierarchy.
+A medium title, commonly used for card titles or smaller page headings. */
+        .d2l-text-title-md {
+            font-family: var(--header-text);
+            font-size: var(--font-size-md);
+            line-height: var(--line-height-md);
+            font-weight: var(--bold);
+        }
+
+/* Purpose
+Title styles provide structured headings for different content sections, offering flexibility in hierarchy.
+A large title, great for primary section headings or content blocks. */
+        .d2l-text-title-lg {
+            font-family: var(--header-text);
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-md);
+            font-weight: var(--bold);
+        }
+
+/* Purpose
+Title styles provide structured headings for different content sections, offering flexibility in hierarchy.
+The largest title style, ideal for main page titles and important headers. */
+        .d2l-text-title-xl {
+            font-family: var(--header-text);
+            font-size: var(--font-size-xl);
+            line-height: var(--line-height-sm);
+            font-weight: var(--bold);
+        }
+
+/* Purpose
+Body styles are used for paragraph text, balancing readability and hierarchy.
+Small body text, used for description on UI cards. */
+        .d2l-text-body-sm {
+            font-family: var(--body-text);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-md);
+            font-weight: var(--reg);
+            max-width: 66ch;
+            letter-spacing: var(--px-048);
+        }
+
+/* Purpose
+Body styles are used for paragraph text, balancing readability and hierarchy.
+Standard body text, used for general content and descriptions. */
+        .d2l-text-body-md {
+            font-family: var(--body-text);
+            font-size: var(--font-size-md);
+            line-height: var(--line-height-lg);
+            font-weight: var(--reg);
+            max-width: 66ch;
+        }
+
+/* Purpose
+Body styles are used for paragraph text, balancing readability and hierarchy.
+A slightly larger body text style, useful for opening paragraphs in blogs/articles, used for larger pieces of text to bring attention too. */
+        .d2l-text-body-lg {
+            font-family: var(--body-text);
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-lg);
+            font-weight: var(--reg);
+            max-width: 66ch;
+        }
+
+/* Purpose
+Labels help provide supporting text, form labels, or UI elements that need concise but clear messaging.
+Extra small labels, great for tooltips, help text on inputs, captions, chip labels. */
+        .d2l-text-label-xs {
+            font-family: var(--label-text);
+            font-size: var(--font-size-xs);
+            line-height: var(--line-height-lg);
+            font-weight: var(--reg); 
+            letter-spacing: var(--px-048);
+        }
+
+/* Purpose
+Labels help provide supporting text, form labels, or UI elements that need concise but clear messaging.
+Extra small active labels, great for active tooltips, active chip labels. */
+        .d2l-text-label-xs-bold {
+            font-family: var(--label-text);
+            font-size: var(--font-size-xs);
+            line-height: var(--line-height-lg);
+            font-weight: var(--bold);
+          letter-spacing: var(--px-048);
+        }
+        
+/* Purpose
+Labels help provide supporting text, form labels, or UI elements that need concise but clear messaging.
+Small labels, medium and small primary and secondary buttons. */
+        .d2l-text-label-sm {
+            font-family: var(--label-text);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-lg);
+            font-weight: var(--reg);
+            letter-spacing: var(--px-048);
+}      
+
+/* Purpose
+Labels help provide supporting text, form labels, or UI elements that need concise but clear messaging.
+Small active labels, medium and small primary and secondary buttons also used with text buttons. */
+        .d2l-text-label-sm-bold {
+            font-family: var(--label-text);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-lg);
+            font-weight: var(--bold);
+            letter-spacing: var(--px-048);
+        }
+
+/* Purpose
+Labels help provide supporting text, form labels, or UI elements that need concise but clear messaging.
+Medium-sized labels for large primary and secondary buttons , and text field input label */
+        .d2l-text-label-md {
+            font-family: var(--label-text);
+            font-size: var(--font-size-md);
+            line-height: var(--line-height-md);
+            font-weight: var(--reg);
+            letter-spacing: var(--px-048);
+}
+
+/* Purpose
+Labels help provide supporting text, form labels, or UI elements that need concise but clear messaging. */
+        .d2l-text-label-md-bold {
+            font-family: var(--label-text);
+            font-size: var(--font-size-md);
+            line-height: var(--line-height-md);
+            font-weight: var(--bold);
+            letter-spacing: var(--px-048);
+        }
+
+/* Purpose
+Meta text is typically used for secondary information, such as timestamps or small contextual notes.
+A lightweight, small-text style for metadata, timestamps, footnotes, or subtle interface details. */
+        .d2l-text-meta {
+            font-family: var(--body-text);
+            font-size: var(--font-size-xs);
+            line-height: var(--line-height-md);
+            font-weight: var(--reg);
+            letter-spacing: var(--px-048);
+        }
+
+/* Subatomic classes: accessible color pairing for text and backgrounds */
+
+.color-surface-page-background{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-page-background);
+}
+
+.color-surface-primary{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-primary);
+}
+
+.color-surface-secondary{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-secondary);
+}
+
+.color-surface-tertiary{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-tertiary);
+}
+
+.color-surface-dark{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-dark);
+}
+
+.color-surface-brand{ 
+    color: var(--color-text-on-light-bg);
+    background-color: var(--color-surface-brand);
+}
+
+.color-surface-action{ 
+    color: var(--color-text-on-dark-bg);
+    background-color: var(--color-surface-action);
+}
+
+.color-surface-action-secondary{ 
+    color: var(--color-text-on-light-bg);
+    background-color: var(--color-surface-action-secondary);
+}
+
+.color-surface-success{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-success);
+}
+
+.color-surface-success-secondary{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-success-secondary);
+}
+
+.color-surface-error{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-error);
+}
+
+.color-surface-error-secondary{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-error-secondary);
+}
+
+.color-surface-warning{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-warning);
+}
+
+.color-surface-warning-secondary{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-warning-secondary);
+}
+
+.color-surface-information{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-information);
+}
+
+.color-surface-information-secondary{ 
+    color: var(--color-text-on-mixed-bg);
+    background-color: var(--color-surface-information-secondary);
+}
+
+.color-surface-dark-on-hover{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-dark-on-hover);
+}
+
+.color-surface-light-on-hover{ 
+    color: var(--color-text-body);
+    background-color: var(--color-surface-light-on-hover);
+}
+
+.color-surface-highlight{ 
+    color: var(--color-text-on-light-bg);
+    background-color: var(--color-surface-highlight);
+}
+
+
+.presentation-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  max-width: var(--px-480);
+  width:100%;
+  background-color: var(--color-neutrals-black64);
+}
+
+/* Form css*/
+
+.input-text{
+  position: relative;
+  max-width: var(--px-320);
+  width: 100%;
+}
+
+.input-text input{
+  width: 100%;
+  padding: var(--padding-md) var(--padding-sm) var(--padding-sm) var(--padding-sm);
+  border: var(--border-width-3xs) var(--solid) var(--color-border-primary);
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  trasition: border-color 0.32s;
+}
+
+.input-text input:focus {
+  border-color: var(--color-border-primary);
+  box-shadow: 0 0 0 var(--border-width-3xs) var(--color-border-brand);
+}
+
+.input-text label {
+  position: absolute;
+  left: var(--padding-md);
+  top: var(--padding-md);
+  pointer-events: none;
+  transition: 0.32s ease all;
+  min-height: var(--px-48);
+  height:100%;
+}
+
+/* When input is focused or has text */
+.input-text input:focus + label,
+.input-text input:not(:placeholder-shown) + label {
+  top: var(--padding-xs);
+  left: var(--padding-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-border-brand);
+  padding: var(--padding-none) var(--padding-xs);
+}
+
+input::placeholder {
+	opacity: 0;
+}
