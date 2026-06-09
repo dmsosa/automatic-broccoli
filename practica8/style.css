@@ -1,0 +1,46 @@
+:root {
+	--primary: rgb(3, 152, 87);
+	--secondary: rgb(221, 181, 0);
+}
+
+.app-table {
+	width: 300px;
+	border-collapse: collapse;
+	border: solid 0.25 var(--primary);
+}
+
+.app-table td, .app-table th {
+	padding: 0.25rem 1.45rem;
+	border: solid 0.25rem #222;
+	background-color: antiquewhite;
+}
+
+.app-table th {
+	background-color: lightslategray;
+	color: #222;
+	font-weight: bold;
+}
+
+.app-table td.full-width
+{
+	width: 100%;
+}
+
+.app-table td.done {
+	background-color: lightblue;
+}
+
+.app-table td.danger {
+	background-color: lightcoral;
+}
+
+.app-table td.info {
+	background-color: rgb(255, 187, 128);
+}
+
+.app-table td.full-width span
+{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
