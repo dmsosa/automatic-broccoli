@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormaWeb S.L.</title>
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/keyframes.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/tables.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/dropdown.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></head>
+<body class="body" data-theme="light">
+    <div id="page-wrapper" class="page-wrapper">
+        <aside id="sidebar" class="sidebar border-right" aria-roledescription="sidebar for the webpage">
+            <div class="sidebar-header border-bottom w-100 px-2 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="avatar link">
+                        <img src="./assets/img/avatar.webp" alt="Avatar's image">
+                        <span class="fw-bold">username-123</span>
+                    </a>
+                    <button class="btn btn-regular">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="app-svg" id="settings-svg">
+                            <path d="M7.84308 20.1979C9.8718 21.3993 10.8862 22 12 22C13.1138 22 14.1282 21.3993 16.1569 20.1979L16.8431 19.7915C18.8718 18.5901 19.8862 17.9894 20.4431 17C21 16.0106 21 14.8092 21 12.4063M20.8147 8C20.7326 7.62759 20.6141 7.3038 20.4431 7C19.8862 6.01057 18.8718 5.40987 16.8431 4.20846L16.1569 3.80211C14.1282 2.6007 13.1138 2 12 2C10.8862 2 9.8718 2.6007 7.84308 3.80211L7.15692 4.20846C5.1282 5.40987 4.11384 6.01057 3.55692 7C3 7.98943 3 9.19084 3 11.5937V12.4063C3 14.8092 3 16.0106 3.55692 17C3.78326 17.4021 4.08516 17.74 4.5 18.0802"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="sidebar-body w-100 p-3">
+                <h2 class="text-start">Secciones</h2>
+                <ul>
+                    <li>Próximos cursos</li>
+                    <li>Diseño Web</li>
+                    <li>Programación</li>
+                    <li>Bases de datos</li>
+                </ul>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur cum sed dicta perferendis dolores eaque nam, quo ad ipsum nostrum optio pariatur illo est. Doloribus neque accusamus deserunt nisi fuga.</p>
+                <hr></hr>
+            </div>
+            <div class="sidebar-footer p-3  w-100 border-top">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>Ajustes</span>
+                    <button class="btn btn-info">O</button>
+                </div>
+            </div>
+        </aside>
+        <div id="main-content" class="main-content" aria-roledescription="page content">
+            <header id="header" class="header">
+                <nav class="navbar navbar-collapse">
+                    <a href="/" class="brand-logo">
+                        <span>FormaWeb S.L.</span>
+                        <img src="./assets/img/logo.png" alt="turtle's logo">
+                    </a>
+                    <button class="nav-dropdown-toggler btn" aria-controls="nav-dropdown-menu" aria-expanded="false">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                                <path d="M 97.529 101.228 L 398.877 98.022" id="line1"></path>
+                                <path d="M 101.804 251.367 L 403.152 248.161" id="line2"></path>
+                                <path d="M 100.735 404.178 L 402.083 400.972" id="line3"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="nav-dropdown-menu bg-secondary" id="nav-dropdown-menu">
+                        <ul class="navbar-ul">
+                            <li class="bg-tertiary"><a href="#" class="link">Inicio</a></li>
+                            <li class="bg-tertiary"><a href="#" class="link">Cursos</a></li>
+                            <li class="bg-tertiary"><a href="#" class="link">Nosotros</a></li>
+                            <li class="bg-tertiary"><a href="#" class="link">Contacto</a></li>
+                            <hr>
+                            <li class="dropdown-wrapper">
+                                <a class="dropdown-toggler link">
+                                    <span>More</span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <ul class="dropdown-ul">
+                                        <li class="dropdown-option"><a href="#" class="link">Link</a></li>
+                                        <li class="dropdown-option"><a href="#" class="link">To</a></li>
+                                        <li class="dropdown-option"><a href="#" class="link">other</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main id="main" class="snap-wrapper">
+                <section class="snap-child hero-section bg-section-primary pt-6 pb-3 d-flex" aria-description="hero-section">
+                    <div class="main-bg">
+                        <div class="clipper active">
+                            <picture>
+                                <source type="image/webp" srcset="./assets/img/hero/herobg.jpg" media="(min-width: 1024px) and (prefers-color-scheme: dark)">
+                                <source type="image/jpg" srcset="./assets/img/hero/herobg.jpg" media="(min-width: 1024px) and (prefers-color-scheme: light)">
+                                <img src="./assets/img/hero/herobg.jpg" alt="default hero background" role="presentation">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <p class="h6 uppercase bold m-0 text-wrap">
+                            <span class="line wrap active">
+                                FormaWeb S.L.
+                            </span>
+                        </p>
+                        <p class="h6 uppercase bold m-0 text-wrap">
+                            <span class="line wrap active">
+                                El aprendizaje para todos.
+                            </span>
+                        </p>
+                        <a href="#section1" class="h6 btn btn-primary bold btn-marquee">
+                            <span>Saber más</span>
+                            <marquee behavior="scroll" direction="right">Saber más</marquee>
+                        </a>
+                    </div>
+                </section>
+                <section class="snap-child bg-section-tertiary" aria-description="section-table">
+                    <div class="app-wave primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <div class="container">
+                        <form action="" class="app-form">
+                            <fieldset class="input-text">
+                                <input  class="d2l-text-label-sm" type="text" name="name" id="name" maxlength="50" required placeholder="Ej: Horacio">
+                                <label for="name" class="d2l-text-label-md ms-3">Nombre</label>
+                            </fieldset>
+                            <fieldset class="input-text">
+                                <input class="d2l-text-label-sm" type="text" name="surname" id="surname" readonly maxlength="80" placeholder="Ej: Quiroga">
+                                <label for="surname" class="d2l-text-label-md ms-3">Apellido</label>
+                            </fieldset>
+                            <fieldset class="input-text">
+                                <input type="text" class="d2l-text-label-sm" name="email" id="email" required placeholder="">
+                                <label for="email" class="d2l-text-label-md ms-3">Email</label>
+                            </fieldset>
+                            <fieldset class="mt-6">
+                                <label for="courses">Cursos de interés</label>
+                                <select name="courses" id="courses" required multiple>
+                                    <option value="programacion" >programacion</option>
+                                    <option value="bd" selected>bases de datos</option>
+                                    <option value="ingles">inglés</option>
+                                    <option value="marketing">marketing digital</option>
+                                    <option value="medicina">medicina</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <label for="birthdate">Fecha de nacimiento</label>
+                                <input type="date" name="birthdate" id="birthdate">
+                            </fieldset>
+                            <fieldset class="input-text">
+                                <input class="d2l-text-label-sm" type="tel" name="tel" id="tel" minlength="6" maxlength="16">
+                                <label for="tel" class="d2l-text-label-md ms-3">Teléfono</label>
+                            </fieldset>
+                            <fieldset>
+                            <legend>Escoge tu modalidad preferida</legend>
+                            <div class="d-flex align-items-center justify-content-start">
+                            <input type="radio" id="modalidad-presencial" name="modalidad" value="presencial" required />
+                            <label for="modalidad-presencial">Presencial</label>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start">
+                            <input type="radio" id="modalidad-virtual" name="modalidad" value="virtual" required />
+                            <label for="modalidad-virtual">Virtual</label>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start">
+                            <input type="radio" id="modalidad-hibrido" name="modalidad" value="hibrido" required />
+                            <label for="modalidad-presencial">Hibrido</label>
+                            </div>
+                            </fieldset>
+                            <fieldset>
+                                <label for="rgpd">Aceptar RGPD</label>
+                                <input type="checkbox" name="rgpd" id="rgpd" required>
+                            </fieldset>
+                            <fieldset class="input-text">
+                                <textarea class="d2l-text-label-sm" name="comment" id="comment"></textarea>
+                                <label for="comment" class="d2l-text-label-md ms-3">Commentarios</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer id="footer" class="footer px-4 py-5">
+                <div class="app-wave tertiary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <div class="container py-5 mt-5">
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3">
+                                <h1>More</h1>
+                                <ul>
+                                    <li><a href="#" class="link">Contacto: info@formawebsl.es</a></li>
+                                    <li><a href="#" class="link">Acerca de nosotros</a></li>
+                                    <li><a href="#" class="link">Carreras</a></li>
+                                    <li><a href="#" class="link">Condiciones de uso</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <h1>Forma Web S.L.</h1>
+                                <h2>desde 1987</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quisquam magnam eligendi nemo architecto, expedita aliquam, temporibus mollitia dolores quas, in minima sed incidunt tempore ipsa officia inventore? Explicabo, quaerat!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script defer type="module" src="./assets/js/app.js"></script>
+</html>

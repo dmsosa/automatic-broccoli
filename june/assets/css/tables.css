@@ -1,0 +1,6 @@
+.app-table {
+    background-color: transparent;
+    backdrop-filter: contrast(80%);
+    border: var(--app-border);
+    box-shadow: var(--app-box-shadow);
+}
